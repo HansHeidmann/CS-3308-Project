@@ -1,0 +1,13 @@
+Who: Madison Rockwell, Calvin Hicks, Hans Heidmann, Sean Tranchetti 
+
+• Title: InPace
+
+• Description: An Arduino wristband to track users on runs and allow them to compete with themselves on the same route later. 
+
+• Vision statement: 
+• Motivation: Innovative and experimental product that allows us to hone our skills programming for Arduino.
+• Risks: this is a large project that could be beyond the scope of time set for this class.  We will set smaller goals that can be met by class end and expand on that if we are ahead of schedule.
+• VCS: Github
+• VCS Link: https://github.com/H-4-N-5/CS-3308-Project
+• Submit a pdf file named: ProjectTitle_Part_1.pdf where ProjectTitle is the name of your project.
+
