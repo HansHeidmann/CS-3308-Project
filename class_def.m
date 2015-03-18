@@ -1,4 +1,5 @@
 //Basic Class info that we came up with!
+#import <Foundation/Foundation.h>
 
 /*class BluetoothSend
   -should send info to the arduino wristband
@@ -18,37 +19,6 @@
 //stuff to create routes
 @end
 
-/*class Graph
-  + associated Route
-*/
-@interface Graph {
-  Route route;
-}
-//graph draw functions
-@end
-
-/*class UserPref
-  +favorite route
-  +current route(or new)
-  +current time(or new)
-*/
-@interface UserPref {
-  Route favorite;
-  Route current;
-  double time;
-}
-@end
-
-/*class OverallSettings
-  +route sorting setting (date/time)
-  +units of measure (miles, km)
-*/
-@interface Settings {
-  NSString sort;
-  NSString units;
-}
-@end
-
 /*class Route
   +ID
   +database query functionality
@@ -61,6 +31,37 @@
   float distance;
 }
 //database query functions
+@end
+
+/*class Graph
+  + associated Route
+*/
+@interface Graph {
+  Route* route;
+}
+//graph draw functions
+@end
+
+/*class UserPref
+  +favorite route
+  +current route(or new)
+  +current time(or new)
+*/
+@interface UserPref {
+  Route* favorite;
+  Route* current;
+  double time;
+}
+@end
+
+/*class OverallSettings
+  +route sorting setting (date/time)
+  +units of measure (miles, km)
+*/
+@interface Settings {
+  NSString* sort;
+  NSString* units;
+}
 @end
 
 /*Database
