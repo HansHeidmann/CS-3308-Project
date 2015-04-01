@@ -21,12 +21,11 @@
 @property(retain) NSMutableArray* results; //array to hold query results
 @property(retain) NSMutableArray* columns; //array to hold names of columns in result
 - (instancetype) init_dbfile: (NSString*) filename;
-- (int) select: (NSString*) query;
-- (int) mutate: (NSString*) query;
+- (int) query: (NSString*) query;
 @end
 
 //extension to hold "private" helper methods
 @interface Database () 
-- (int) runner: (const char*) query isMut: (BOOL) mutable;
-- (int) callback: (void*) pass ColNum: (int) col ColText: (char**) names Results: (char**) res;
+- (int) callback: (int) col ColText: (char**) names Results: (char**) res;
+int call_dummy(void* db, int col, char** names, char** res);
 @end
