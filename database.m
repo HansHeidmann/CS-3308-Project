@@ -26,20 +26,22 @@
 //C callback function called by sqlite3_exec() on each row. Calls the
 //callback method on the database object supplied as a void*
 //Objective-C doesn't like callbacks, hence the workaround
-int call_dummy(void* db, int col, char** names, char** res) {
-  return [(id) db callback: col ColText: names Results: res];
+int call_dummy(void* db, int col, char** res, char** names) {
+  return [(id) db callback: col Results: res ColText: names];
 }
 
 //callback function called on each row of the results of a select query
 //adds column names and data to our own internal arrays
-- (int) callback: (int) col ColText: (char**) names Results: (char**) res {
+- (int) callback: (int) col Results: (char**) res ColText: (char**) names {
   NSMutableArray* row;
   row = [[NSMutableArray alloc] init];
   for (int i = 0; i < col; i++) {
     if ([self.columns count] != col) {
+      //NSLog(@"column name: %s", names[i]);
       [self.columns addObject: [NSString stringWithUTF8String: names[i]]];
     }
     [row addObject: [NSString stringWithUTF8String: res[i]]];
+    //NSLog(@"result: %s", res[i]);
   }
   [self.results addObject: row];
   return 0;
@@ -47,7 +49,7 @@ int call_dummy(void* db, int col, char** names, char** res) {
 
 //perform the sql statement on our database.
 - (int) query: (NSString*) query {
-  NSLog(@"query: %@", query);
+  //NSLog(@"query: %@", query);
   int res = 0; //holds sql status result for error check
   //(Re)Initialize results array
   if (self.results != nil) {
@@ -65,18 +67,19 @@ int call_dummy(void* db, int col, char** names, char** res) {
   //open the database
   //this might have to change once bundle support is added
   CHECK(sqlite3_open([self.file UTF8String], &db), res);
-  NSLog(@"open database");
+  //NSLog(@"open database");
   //execute our query and call call_dummy() on each row of results
   //self (the database object) gets passed as the first argument to the
   //callback
   CHECK(sqlite3_exec(db, [query UTF8String], &call_dummy, self, NULL), res);
   //close our database connection
   CHECK(sqlite3_close(db), res);
-  NSLog(@"closed databse");
+  //NSLog(@"closed databse");
   return 0; //we've made it this far without returning. All's good
 }
 @end
 
+/*
 int main () {
   @autoreleasepool {
     Database* test = [[Database alloc] init_dbfile: @"database.db"];
@@ -98,3 +101,4 @@ int main () {
   }
   return 0;
 }
+*/

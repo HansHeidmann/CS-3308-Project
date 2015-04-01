@@ -26,6 +26,6 @@
 
 //extension to hold "private" helper methods
 @interface Database () 
-- (int) callback: (int) col ColText: (char**) names Results: (char**) res;
-int call_dummy(void* db, int col, char** names, char** res);
+- (int) callback: (int) col Results: (char**) res ColText: (char**) names;
+int call_dummy(void* db, int col, char** res, char** names);
 @end
