@@ -1,0 +1,3 @@
+//year,month,day,hour,minute,seconds,latitude,longitude,altitude(meters),speed(m/s)
+
+2015,3,5,13,41,15,40.007290,-105.263028,1635,0
