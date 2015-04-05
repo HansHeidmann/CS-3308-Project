@@ -1,6 +1,11 @@
 CREATE TABLE IF NOT EXISTS "Routes" (
 "ID" INTEGER PRIMARY KEY,
-"Name" char
+"Name" char,
+"Distance" float,
+"Time" float,
+"Year" int,
+"Month" int,
+"Day" int
 )
 ;
 
@@ -16,9 +21,6 @@ CREATE TABLE IF NOT EXISTS "Coordinates" (
 CREATE TABLE IF NOT EXISTS "Times" (
 "ID" INTEGER PRIMARY KEY,
 "CoordinateID" int REFERENCES "Coordinates"("ID") ON DELETE CASCADE ON UPDATE CASCADE,
-"Year" int,
-"Month" int,
-"Day" int,
 "Hour" int,
 "Minute" int,
 "Second" int
