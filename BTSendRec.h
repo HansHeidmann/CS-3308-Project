@@ -20,6 +20,6 @@
 - (void) startDiscoveringServices;
 - (void) reset;
 - (void) peripheral: (CBPeripheral*) peripheral didDiscoverServices: (NSError*) error;
-- (void) peripheral: (CBPeripheral*) peripheral didDiscoverCharactisticsForService: (CBService*) service error: (NSError*) error;
-- (void) sendBTServicesNotificationWithIsBluetoothConnected: (BOOL) isBluetoothConnected;
+- (void) peripheral: (CBPeripheral*) peripheral didDiscoverCharacteristicsForService: (CBService*) service error: (NSError*) error;
+- (void) sendBTServiceNotificationWithIsBluetoothConnected: (BOOL) isBluetoothConnected;
 @end
