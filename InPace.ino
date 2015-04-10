@@ -1,6 +1,6 @@
 /*
-                               ____  _____ 
-    |  |\   |  |---\  |---|   /      |  
+    .  .    .   ___    ___     ____  _____ 
+    |  |\   |  |   \  |   |   /      |  
     |  | \  |  |___|  |___|  |       |____
     |  |  \ |  |      |   |  \       |
     |  |   \|  |      |   |   \____  |____
@@ -22,17 +22,56 @@
     
     RX --> pin D-3
     TX --> pin D-4
+    
+    -----------------------------
+    
+    HM-10 BLE 4.0 Bluetooth Module Pins
+    
+    RX --> TX
+    TX --> RX
+    
+    -----------------------------
+    
+    RGB LED pins
+    
+         __   
+        /  \
+        |___|
+        /| |\
+       | | | |
+       | | | |
+       | | | |
+       | | | | 
+      1  | | 4
+         | 3
+         2
+  
+    (1) red pin
+    (2) common ground
+    (3) green pin
+    (4) blue pin
 
 */
+
 
 #include <SoftwareSerial.h>    // to use pins 3 and 4 for RX and TX with GPS module
 #include <TinyGPS.h>    // great backend library to support the GY-GPS6MV2
 #include <SPI.h>    // for writing/reading data to/from a micro SD card 
 #include <SD.h>    // for writing/reading data to/from a micro SD card 
 
+
 File myFile;    // creates a "File" var that will be a pointer to the .txt file on the micro SD
 TinyGPS gps;    // creates a GPS object for the module
-SoftwareSerial ss(4, 3);    // initialize pins 3 and 4 to be used for transmitting and receiving
+SoftwareSerial ss(3, 2);    // initialize pins 3 and 2 to be used for transmitting and receiving GPS data
+
+
+int redPin = 9;
+int greenPin = 8;
+int bluePin = 7;
+
+String RGB_LED_COLOR; //  = "off, "red", "green", "blue", "yellow", "purple", "teal"
+
+
 
 // define functions for GPS (full functions are below the main loop)
 static void smartdelay(unsigned long ms);
@@ -56,7 +95,7 @@ void setup()
   if (!SD.begin(10)) { //if SD isnt available, stop doign stuff
     return;
   }
-  Serial.println("card access success"); 
+  //Serial.println("card access success"); 
 
   myFile = SD.open("gpsdata.txt", FILE_WRITE);
 
