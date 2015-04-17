@@ -5,16 +5,19 @@
 @synthesize file = _file;
 @synthesize results = _results;
 @synthesize columns = _columns;
+@synthesize last_rowid = _last_rowid;
 
-#ifndef __arm__
 //destructor
 - (void) dealloc {
+  //close the database
+  sqlite3_close(database);
+#ifndef __arm__
   [_file release];
   [_results release];
   [_columns release];
   [super dealloc];
-}
 #endif
+}
 
 //constructor
 - (instancetype) init_dbfile: (NSString*) filename {
@@ -22,6 +25,12 @@
     //gonna have to add support for bundles, here
     self.file = filename;
   }
+  int res = sqlite3_open([self.file UTF8String], &database);
+  if (res != SQLITE_OK) {
+    database = NULL;
+  }
+  //make sure our foreign key support is set for this connection
+  [self query: @"PRAGMA foreign_keys=ON;"];
   return self;
 }
 
@@ -39,11 +48,9 @@ int call_dummy(void* db, int col, char** res, char** names) {
   row = [[NSMutableArray alloc] init];
   for (int i = 0; i < col; i++) {
     if ([self.columns count] != col) {
-      //NSLog(@"column name: %s", names[i]);
       [self.columns addObject: [NSString stringWithUTF8String: names[i]]];
     }
     [row addObject: [NSString stringWithUTF8String: res[i]]];
-    //NSLog(@"result: %s", res[i]);
   }
   [self.results addObject: row];
   return 0;
@@ -51,7 +58,6 @@ int call_dummy(void* db, int col, char** res, char** names) {
 
 //perform the sql statement on our database.
 - (int) query: (NSString*) query {
-  //NSLog(@"query: %@", query);
   int res = 0; //holds sql status result for error check
   //(Re)Initialize results array
   if (self.results != nil) {
@@ -65,18 +71,11 @@ int call_dummy(void* db, int col, char** res, char** names) {
     self.columns = nil;
   }
   self.columns = [[NSMutableArray alloc] init];
-  sqlite3* db;
-  //open the database
-  //this might have to change once bundle support is added
-  CHECK(sqlite3_open([self.file UTF8String], &db), res);
-  //NSLog(@"open database");
   //execute our query and call call_dummy() on each row of results
   //self (the database object) gets passed as the first argument to the
   //callback
-  CHECK(sqlite3_exec(db, [query UTF8String], &call_dummy, (__bridge void*) self, NULL), res);
-  //close our database connection
-  CHECK(sqlite3_close(db), res);
-  //NSLog(@"closed databse");
+  CHECK(sqlite3_exec(database, [query UTF8String], &call_dummy, (__bridge void*) self, NULL), res);
+  self.last_rowid = sqlite3_last_insert_rowid(database);
   return 0; //we've made it this far without returning. All's good
 }
 @end
