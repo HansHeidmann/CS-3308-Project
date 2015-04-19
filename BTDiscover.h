@@ -7,6 +7,7 @@
 #import "BTSendRec.h"
 
 /** \brief Class responsible for finding and connecting/disconnecting peripheral
+
 This class is largely a wrapper around the CBCentralManager class and also acts as its delegate object. As such, many of its functions are implemented so the class conforms to the CBCentralManagerDelegate protocol.
 */
 @interface BTDiscover: NSObject <CBCentralManagerDelegate> {
@@ -33,7 +34,7 @@ This class is largely a wrapper around the CBCentralManager class and also acts 
 /** This function is called when a peripheral was discovered during scanning by the CBCentralManager object. Part of the CBCentralManagerDelegate protocol.
 \param central The central manager object
 \param peripheral The discovered peripheral
-\param data The advertisement data (if any)
+\param advertisementData The advertisement data (if any)
 \param RSSI The signal strength
 */
 - (void) centralManager:(CBCentralManager*) central didDiscoverPeripheral:(CBPeripheral*) peripheral advertisementData:(NSDictionary*) advertisementData RSSI:(NSNumber*) RSSI;

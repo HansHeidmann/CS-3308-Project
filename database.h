@@ -12,6 +12,7 @@
     return var; }
 
 /** \brief Database manager class
+
 This class maintains an SQLITE database to hold the various Routes, Coordinates, and Times.
 */
 @interface Database: NSObject {

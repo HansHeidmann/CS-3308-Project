@@ -8,6 +8,12 @@
 #import <time.h>
 #import "database.h"
 
+/** \file BTSendRec.h
+    \brief Bluetooth send and receive functionality
+
+This file defines the necessary functions and macros to handle reading data from the InPace wristband, parsing it, submitting it to the database, reading values out of the database, and sending the necessary data to the wristband.
+*/
+
 /** This macro expands to a CBUUID object that represents the UUID of the Bluetooth shield used in the InPace wristband.
 */
 #define BLE_UUID [CBUUID UUIDWithString: @"27EC8B94-9C1A-FE12-3669-780CD087A7A4"]
@@ -23,7 +29,7 @@
 /** This macro expands to the mean radius of the Earth in meters.
 */
 #define RADIUS 6371000
-/** This macro expands to teh value of pi.
+/** This macro expands to the value of pi.
 */
 #define PI 3.1415926
 /** This macro takes the value x and converts it into radians.
@@ -31,6 +37,7 @@
 #define to_rad(x) ((double) x * PI / 180)
 
 /** \brief Class responsible for doing the data transmission to the connected peripheral
+
 This class is largely a wrapper around CBPeripheral and also acts as its delegate object. As such, many functions are implemented so the class conforms to the CBPeripheralDelegate protocol.
 */
 @interface BTSendRec : NSObject <CBPeripheralDelegate>
@@ -38,7 +45,7 @@ This class is largely a wrapper around CBPeripheral and also acts as its delegat
 - (void) startDiscoveringServices;
 - (void) reset;
 /** \param filename The name of the file whose content is to be parsed and placed into a database
-\param db The database where the cata will be stored
+\param db The database where the data will be stored
 */
 - (void) writeFile: (NSString*) filename toDatabase: (Database*) db;
 /** This function uses the Haversine Formula to compute the distance between two pairs of GPS coordinates. Both input parameters are assumed to be arrays of doubles of the form [Latitude, Longitude], both of which are in degrees.
