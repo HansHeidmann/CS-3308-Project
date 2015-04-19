@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Hans Heidmann. All rights reserved.
 //
 
+//Hi Hans!
+
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
