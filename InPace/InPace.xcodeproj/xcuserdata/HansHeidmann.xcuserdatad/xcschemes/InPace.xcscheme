@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0BE7301E1AE45E3D00DE0CB9"
+               BlueprintIdentifier = "E613181A1AE471F300829760"
                BuildableName = "InPace.app"
                BlueprintName = "InPace"
                ReferencedContainer = "container:InPace.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0BE730371AE45E3D00DE0CB9"
+               BlueprintIdentifier = "E61318331AE471F400829760"
                BuildableName = "InPaceTests.xctest"
                BlueprintName = "InPaceTests"
                ReferencedContainer = "container:InPace.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0BE730371AE45E3D00DE0CB9"
+               BlueprintIdentifier = "E61318331AE471F400829760"
                BuildableName = "InPaceTests.xctest"
                BlueprintName = "InPaceTests"
                ReferencedContainer = "container:InPace.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0BE7301E1AE45E3D00DE0CB9"
+            BlueprintIdentifier = "E613181A1AE471F300829760"
             BuildableName = "InPace.app"
             BlueprintName = "InPace"
             ReferencedContainer = "container:InPace.xcodeproj">
@@ -72,10 +72,11 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0BE7301E1AE45E3D00DE0CB9"
+            BlueprintIdentifier = "E613181A1AE471F300829760"
             BuildableName = "InPace.app"
             BlueprintName = "InPace"
             ReferencedContainer = "container:InPace.xcodeproj">
@@ -90,10 +91,11 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0BE7301E1AE45E3D00DE0CB9"
+            BlueprintIdentifier = "E613181A1AE471F300829760"
             BuildableName = "InPace.app"
             BlueprintName = "InPace"
             ReferencedContainer = "container:InPace.xcodeproj">

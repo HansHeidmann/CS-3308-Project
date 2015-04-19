@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  InPace2
+//  InPace
 //
-//  Created by Madison Rockwell on 3/13/15.
-//  Copyright (c) 2015 Madison Rockwell. All rights reserved.
+//  Created by Hans Heidmann on 4/19/15.
+//  Copyright (c) 2015 Hans Heidmann. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -16,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    // Override point for customization after application launch.
     return YES;
 }
 
