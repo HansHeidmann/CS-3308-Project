@@ -16,13 +16,13 @@ This file defines the necessary functions and macros to handle reading data from
 
 /** This macro expands to a CBUUID object that represents the UUID of the Bluetooth shield used in the InPace wristband.
 */
-#define BLE_UUID [CBUUID UUIDWithString: @"27EC8B94-9C1A-FE12-3669-780CD087A7A4"]
+#define BLE_UUID [CBUUID UUIDWithString: @"713D0000-503E-4C75-BA94-3148F18D941E"]
 /** This macro expands to a CBUUID object that represents the UUID of the Read characteristic on the Bluetooth shield.
 */
-#define RX_UUID [CBUUUID UUIDWithString: @"00000000-0000-0000-0000-000000000000"]
+#define RX_UUID [CBUUUID UUIDWithString: @"713D0002-503E-4C75-BA94-3148F18D941E"]
 /** This macro expands to a CBUUID object that represents the UUID of the Write characteristic on the Bluetooth shield.
 */
-#define TX_UUID [CBUUID UUIDWIthString: @"00000000-0000-0000-0000-000000000000"]
+#define TX_UUID [CBUUID UUIDWIthString: @"713D0003-503E-4C75-BA94-3148F18D941E"]
 /** No idea what this does or why it's here, honestly...
 */
 #define RWT_BLE_SERVICE_CHANGED_STATUS_NOTIFICATION @"stuff goes here"
