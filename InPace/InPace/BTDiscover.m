@@ -1,4 +1,3 @@
-#import "BTSendRec.h"
 #import "BTDiscover.h"
 
 @implementation BTDiscover
@@ -19,14 +18,12 @@
   return self;
 }
 
-//initiate scan for out wristband
+//initiate scan
 - (void) scanForWristband {
   [self.manager scanForPeripheralsWithServices: @[BLE_UUID] options: nil];
 }
 
 //called when a peripheral was discovered during scanning by the CBCentralManager object
-//central is the manager object, peripheral is the discovered peripheral
-//data is the advertisement data (if any), RSSI is the signal strength
 - (void) centralManager:(CBCentralManager*) central didDiscoverPeripheral:(CBPeripheral*) peripheral advertisementData:(NSDictionary*) advertisementData RSSI:(NSNumber*) RSSI {
   //make sure peripheral is a valid one
   if (!peripheral || !peripheral.name || [peripheral.name isEqualToString: @""]) {
@@ -41,8 +38,6 @@
 }
 
 //called when a peripheral was successfully connected to by our CBCM object
-//central is the CBCentralManager object, peripheral is the peripheral that
-//just got connected
 - (void) centralManager:(CBCentralManager*) central didConnectPeripheral:(CBPeripheral*) peripheral {
   //make sure peripheral is valid. Probably paranoid
   if (!peripheral) {
@@ -57,8 +52,6 @@
 }
 
 //called when a peripheral has disconnected
-//central is the manager object, peripheral is the peripheral that has been
-//disconnected, error is cause of faliure if any
 - (void) centralManager:(CBCentralManager*) central didDisconnectPeripheral:(CBPeripheral*) peripheral error:(NSError*) error {
   //make sure peripheral is valid. More paranoia?
   if (!peripheral) {
