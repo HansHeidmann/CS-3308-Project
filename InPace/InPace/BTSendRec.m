@@ -195,33 +195,20 @@
     for (CBCharacteristic *characteristic in characteristics) {
         if ([[characteristic UUID] isEqual: RX_UUID]) {
             self.readCharacteristic = characteristic;
-            [discoveredCharacteristics setValue: YES forKey: @"RX"];
+            [discoveredCharacteristics setValue: @YES forKey: @"RX"];
         } else if ([[characteristic UUID] isEqual: TX_UUID]) {
-            self.writeCharateristic = characteristic;
-            [discoveredCharacteristics setValue: YES forKey: @"TX"]
+            self.writeCharacteristic = characteristic;
+            [discoveredCharacteristics setValue: @YES forKey: @"TX"];
         }
             
         // Send notification that Bluetooth is connected and all required characteristics are discovered
-        if ([discoveredCharacteristics getValueForKey: @"RX"] && [discoveredCharacteristics getValueForKey: @"TX"]) {
+        if ([discoveredCharacteristics valueForKey: @"RX"] && [discoveredCharacteristics valueForKey: @"TX"]) {
             [self sendBTServiceNotificationWithIsBluetoothConnected:YES];
         }
     }
 }
 
 #pragma mark - Private
-
-- (void)writePosition:(UInt8)position {
-    
-    // See if characteristic has been discovered before writing to it
-    if (!self.positionCharacteristic) {
-        return;
-    }
-    
-    NSData  *data   = nil;
-    data = [NSData dataWithBytes:&position length:sizeof (position)];
-    [self.peripheral writeValue:data forCharacteristic:self.positionCharacteristic type:CBCharacteristicWriteWithResponse];
-    
-}
 
 - (void)sendBTServiceNotificationWithIsBluetoothConnected:(BOOL)isBluetoothConnected {
     NSDictionary *connectionDetails = @{@"isConnected": @(isBluetoothConnected)};

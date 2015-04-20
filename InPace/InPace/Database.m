@@ -11,12 +11,6 @@
 - (void) dealloc {
   //close the database
   sqlite3_close(database);
-#ifndef __arm__
-  [_file release];
-  [_results release];
-  [_columns release];
-  [super dealloc];
-#endif
 }
 
 //constructor

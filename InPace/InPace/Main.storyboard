@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a6v-7a-Cu9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a6v-7a-Cu9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Test Receiving BLE Data -->
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="38" y="72" width="525" height="3741"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="testTextView"/>
-                                <mutableString key="text">-105.280677, 40.011959, 04/11/2015, 06:01:25
+                                <string key="text">-105.280677, 40.011959, 04/11/2015, 06:01:25
 -105.280662, 40.011951, 04/11/2015, 06:01:27
 -105.280639, 40.011943, 04/11/2015, 06:01:29
 -105.280609, 40.011924, 04/11/2015, 06:01:31
@@ -242,7 +242,7 @@
 -105.280212, 40.012214, 04/11/2015, 06:08:49
 -105.280212, 40.012210, 04/11/2015, 06:08:51
 -105.280227, 40.012207, 04/11/2015, 06:08:53
-</mutableString>
+</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -257,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWe-c3-F8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="899" y="-1109"/>
+            <point key="canvasLocation" x="1599" y="-1089"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
