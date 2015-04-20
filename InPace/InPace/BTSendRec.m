@@ -10,7 +10,8 @@
 
 @interface BTSendRec()
 @property (strong, nonatomic) CBPeripheral *peripheral;
-@property (strong, nonatomic) CBCharacteristic *positionCharacteristic;
+@property (strong, nonatomic) CBCharacteristic *readCharacteristic;
+@property (strong, nonatomic) CBCharacteristic *writeCharacteristic;
 @end
 
 @implementation BTSendRec
@@ -22,6 +23,9 @@
     if (self) {
         self.peripheral = peripheral;
         [self.peripheral setDelegate:self];
+        [discoveredCharacteristics initWithCapacity: 2];
+        [discoveredCharacteristics setValue: NO forKey: @"RX"];
+        [discoveredCharacteristics setValue: NO forKey: @"TX"];
     }
     return self;
 }
@@ -148,7 +152,7 @@
 //discoverServices:
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
     NSArray *services = nil;
-    NSArray *uuidsForBTService = @[RWT_POSITION_CHAR_UUID];
+    NSArray *uuidsForBTService = @[RX_UUID, TX_UUID];
     
     if (peripheral != self.peripheral) {
         //NSLog(@"Wrong Peripheral.\n");
@@ -189,10 +193,16 @@
     }
     
     for (CBCharacteristic *characteristic in characteristics) {
-        if ([[characteristic UUID] isEqual:RWT_POSITION_CHAR_UUID]) {
-            self.positionCharacteristic = characteristic;
+        if ([[characteristic UUID] isEqual: RX_UUID]) {
+            self.readCharacteristic = characteristic;
+            [discoveredCharacteristics setValue: YES forKey: @"RX"];
+        } else if ([[characteristic UUID] isEqual: TX_UUID]) {
+            self.writeCharateristic = characteristic;
+            [discoveredCharacteristics setValue: YES forKey: @"TX"]
+        }
             
-            // Send notification that Bluetooth is connected and all required characteristics are discovered
+        // Send notification that Bluetooth is connected and all required characteristics are discovered
+        if ([discoveredCharacteristics getValueForKey: @"RX"] && [discoveredCharacteristics getValueForKey: @"TX"]) {
             [self sendBTServiceNotificationWithIsBluetoothConnected:YES];
         }
     }

@@ -1,4 +1,4 @@
-#import "database.h"
+#import "Database.h"
 
 @implementation Database
 //generate get and set methods

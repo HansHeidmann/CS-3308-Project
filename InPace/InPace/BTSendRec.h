@@ -6,7 +6,7 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <math.h>
 #import <time.h>
-#import "database.h"
+#import "Database.h"
 
 /** \file BTSendRec.h
     \brief Bluetooth send and receive functionality
@@ -40,7 +40,8 @@ This file defines the necessary functions and macros to handle reading data from
 
 This class is largely a wrapper around CBPeripheral and also acts as its delegate object. As such, many functions are implemented so the class conforms to the CBPeripheralDelegate protocol.
 */
-@interface BTSendRec : NSObject <CBPeripheralDelegate>
+@interface BTSendRec : NSObject <CBPeripheralDelegate> {
+  NSMutableDictionary* discoveredCharacteristics;
 - (instancetype) initWithPeripheral:(CBPeripheral*) peripheral;
 - (void) startDiscoveringServices;
 - (void) reset;
