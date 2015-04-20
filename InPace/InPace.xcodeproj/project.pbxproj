@@ -22,6 +22,7 @@
 		E61318591AE4734D00829760 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E61318581AE4734D00829760 /* libsqlite3.dylib */; };
 		E613185B1AE474CC00829760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E613185A1AE474CC00829760 /* Main.storyboard */; };
 		E613185D1AE4766600829760 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E613185C1AE4766500829760 /* ViewController.m */; };
+		E613A1041AE47BF700AACE6B /* SyncDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E613A1031AE47BF700AACE6B /* SyncDataViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		E61318581AE4734D00829760 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E613185A1AE474CC00829760 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E613185C1AE4766500829760 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E613A1021AE47BDA00AACE6B /* SyncDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyncDataViewController.h; sourceTree = "<group>"; };
+		E613A1031AE47BF700AACE6B /* SyncDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncDataViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				E613184E1AE4726200829760 /* RoutesViewController.m */,
 				E613184F1AE4726200829760 /* SettingsViewController.h */,
 				E61318501AE4726200829760 /* SettingsViewController.m */,
+				E613A1021AE47BDA00AACE6B /* SyncDataViewController.h */,
+				E613A1031AE47BF700AACE6B /* SyncDataViewController.m */,
 				E61318251AE471F300829760 /* ViewController.h */,
 				E613185C1AE4766500829760 /* ViewController.m */,
 				E613182B1AE471F300829760 /* Images.xcassets */,
@@ -260,6 +265,7 @@
 				E613185D1AE4766600829760 /* ViewController.m in Sources */,
 				E61318511AE4726200829760 /* BTDiscover.m in Sources */,
 				E61318561AE4726200829760 /* RoutesViewController.m in Sources */,
+				E613A1041AE47BF700AACE6B /* SyncDataViewController.m in Sources */,
 				E61318571AE4726200829760 /* SettingsViewController.m in Sources */,
 				E61318521AE4726200829760 /* BTSendRec.m in Sources */,
 				E61318241AE471F300829760 /* AppDelegate.m in Sources */,
@@ -454,6 +460,7 @@
 				E61318401AE471F400829760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E61318411AE471F400829760 /* Build configuration list for PBXNativeTarget "InPaceTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +469,7 @@
 				E61318431AE471F400829760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
