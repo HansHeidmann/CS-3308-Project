@@ -25,7 +25,7 @@
     //self.locationManager.delegate = self;
     
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.0274, -105.2519);
-    MKCoordinateSpan span = MKCoordinateSpanMake(2, 2);
+    MKCoordinateSpan span = MKCoordinateSpanMake(10, 10);
     MKCoordinateRegion region = MKCoordinateRegionMake(center, span);
     [self.mapView setRegion: region animated: YES];
     
