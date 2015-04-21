@@ -20,11 +20,24 @@
 
 //initiate scan
 - (void) scanForWristband {
+    NSLog(@"scanning for wristband. calling scanforPeripheralsWithServices");
   [self.manager scanForPeripheralsWithServices: @[BLE_UUID] options: nil];
+}
+
+-(void) setWristband:(BTSendRec *)wristband {
+    if (_wristband) {
+        [_wristband reset];
+        _wristband = nil;
+    }
+    _wristband = wristband;
+    if (_wristband) {
+        [_wristband startDiscoveringServices];
+    }
 }
 
 //called when a peripheral was discovered during scanning by the CBCentralManager object
 - (void) centralManager:(CBCentralManager*) central didDiscoverPeripheral:(CBPeripheral*) peripheral advertisementData:(NSDictionary*) advertisementData RSSI:(NSNumber*) RSSI {
+    NSLog(@"in centralManager:didDiscoverPeripheral. Found peripheral UUID: %@", peripheral.identifier);
   //make sure peripheral is a valid one
   if (!peripheral || !peripheral.name || [peripheral.name isEqualToString: @""]) {
     return;
@@ -46,6 +59,7 @@
   //if the peripheral is the target one we want, we create a Send/Rec class
   //and stop scanning for new devices to connect to
   if (peripheral == self.bt_periph) {
+      NSLog(@"initing BTSendRec class with peripheral");
     self.wristband = [[BTSendRec alloc] initWithPeripheral: peripheral];
     [self.manager stopScan];
   }
@@ -53,6 +67,7 @@
 
 //called when a peripheral has disconnected
 - (void) centralManager:(CBCentralManager*) central didDisconnectPeripheral:(CBPeripheral*) peripheral error:(NSError*) error {
+    NSLog(@"in centralManager:didDisconnectPeripheral. disconnected peripheral: %@", peripheral.identifier);
   //make sure peripheral is valid. More paranoia?
   if (!peripheral) {
     return;

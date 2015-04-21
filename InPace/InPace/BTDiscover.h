@@ -16,7 +16,7 @@ This class is largely a wrapper around the CBCentralManager class and also acts 
   CBCentralManager* _manager;
   CBPeripheral* _bt_periph;
 }
-@property (strong) BTSendRec* wristband; /**<Pointer to class to handle sending and receiving data to and from the Bluetooth peripheral */
+@property (strong, nonatomic) BTSendRec* wristband; /**<Pointer to class to handle sending and receiving data to and from the Bluetooth peripheral */
 @property (strong) CBCentralManager* manager; /**<Pointer to the internal central manager object */
 @property (strong) CBPeripheral* bt_periph; /**<Pointer to the discovered Bluetooth peripheral */
 

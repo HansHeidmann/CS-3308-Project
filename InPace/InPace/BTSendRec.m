@@ -151,6 +151,7 @@
 //called when the peripheral's service has been discovered by the method
 //discoverServices:
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+    NSLog(@"in peripheral:didDiscoverServices");
     NSArray *services = nil;
     NSArray *uuidsForBTService = @[RX_UUID, TX_UUID];
     
@@ -180,6 +181,7 @@
 //called when peripheral discovers a characteristics to connect to for a
 //service by the method discoverCharacteristics:forService:
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
+    NSLog(@"in peripheral:didDiscoverCharacteristicsForService");
     NSArray     *characteristics    = [service characteristics];
     
     if (peripheral != self.peripheral) {
@@ -194,9 +196,11 @@
     
     for (CBCharacteristic *characteristic in characteristics) {
         if ([[characteristic UUID] isEqual: RX_UUID]) {
+            NSLog(@"discovered RX_UUID characteristic");
             self.readCharacteristic = characteristic;
             [discoveredCharacteristics setValue: @YES forKey: @"RX"];
         } else if ([[characteristic UUID] isEqual: TX_UUID]) {
+            NSLog(@"discovered TX_UUID characteristic");
             self.writeCharacteristic = characteristic;
             [discoveredCharacteristics setValue: @YES forKey: @"TX"];
         }

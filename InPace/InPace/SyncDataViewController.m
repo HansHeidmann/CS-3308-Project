@@ -15,6 +15,7 @@
 @interface SyncDataViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextView *testTextView;
+@property (strong) BTDiscover* discover;
 
 
 -(void) getData;
@@ -23,11 +24,14 @@
 
 @implementation SyncDataViewController
 
+@synthesize testTextView;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.title = @"SyncData";
+    
     
     [self getData];
     
@@ -41,12 +45,21 @@
 
 -(void) getData {
     
-    BTDiscover* bluetoothDiscoverer = [[BTDiscover alloc] init];
+    self.discover = [[BTDiscover alloc] init];
     
-    [bluetoothDiscoverer scanForWristband];
+    if (self.discover.manager.state != CBCentralManagerStatePoweredOn) {
+        NSLog(@"must be powered on");
+    }
+   
     
-    self.testTextView.text = @"something";
     
+    
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    
+    self.testTextView.text = @"Hello";
+ 
 }
 
 
