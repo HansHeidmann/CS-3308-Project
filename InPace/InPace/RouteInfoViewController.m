@@ -22,8 +22,8 @@
     
     self.mapView.delegate = self;
     
-    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.0274, -105.2519);
-    MKCoordinateSpan span = MKCoordinateSpanMake(.1, .1);
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.012603, -105.279182);
+    MKCoordinateSpan span = MKCoordinateSpanMake(.005, .005);
     MKCoordinateRegion region = MKCoordinateRegionMake(center, span);
     [self.mapView setRegion: region animated: YES];
     
@@ -35,19 +35,39 @@
     
     [self loadRouteData];
     
+    CLLocationCoordinate2D coords[[self.arrRouteCoords count]];
+    
+    for (int i = 0; i < [self.arrRouteCoords count]; i++) {
+        coords[i] = CLLocationCoordinate2DMake([[[self.arrRouteCoords objectAtIndex: i] objectAtIndex: 0] doubleValue], [[[self.arrRouteCoords objectAtIndex: i] objectAtIndex: 1] doubleValue]);
+    }
+    
+    MKPolyline *routeMap = [MKPolyline polylineWithCoordinates:coords count:[self.arrRouteCoords count]];
+    
+    [self.mapView addOverlay:routeMap];
+    
 }
 
 
 -(void)loadRouteData {
     
-    NSString *query = [NSString stringWithFormat:@"select * from Coordinates where RouteID=%lld", self.routeID];
+    NSString *query = [NSString stringWithFormat:@"select Latitude, Longitude from Coordinates where RouteID=%lld", self.routeID];
     
-    [self.arrRouteCoord removeAllObjects];
+    [self.arrRouteCoords removeAllObjects];
     
     [self.dbManager query:query];
-    self.arrRouteCoord = [[NSMutableArray alloc] initWithArray:self.dbManager.results];
+    self.arrRouteCoords = [[NSMutableArray alloc] initWithArray:self.dbManager.results];
     
+}
+
+-(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
     
+    MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithPolyline:overlay];
+    
+    renderer.strokeColor = [[UIColor redColor] colorWithAlphaComponent:1.0];
+    
+    renderer.lineWidth = 3;
+    
+    return renderer;
 }
 
 

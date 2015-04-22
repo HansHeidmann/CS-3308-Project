@@ -19,7 +19,7 @@
 
 @property (nonatomic) long long int routeID;/**<holds ID of current route*/
 @property (nonatomic, strong) Database *dbManager;/**<instance of Database*/
-@property (nonatomic, strong) NSMutableArray *arrRouteCoord;/**<array for holding route coordinates from DB*/
+@property (nonatomic, strong) NSMutableArray *arrRouteCoords;/**<array for holding route coordinates from DB*/
 
 /** Method for pulling individual route coordinates based on the routeID
  */
