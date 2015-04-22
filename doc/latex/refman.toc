@@ -1,0 +1,81 @@
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}App\discretionary {-}{}{}Delegate Class Reference}{7}{section.4.1}
+\contentsline {section}{\numberline {4.2}App\discretionary {-}{}{}Delegate() Category Reference}{7}{section.4.2}
+\contentsline {section}{\numberline {4.3}B\discretionary {-}{}{}T\discretionary {-}{}{}Discover Class Reference}{7}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{8}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Method Documentation}{8}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}central\discretionary {-}{}{}Manager\discretionary {-}{}{}:did\discretionary {-}{}{}Connect\discretionary {-}{}{}Peripheral\discretionary {-}{}{}:}{8}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}central\discretionary {-}{}{}Manager\discretionary {-}{}{}:did\discretionary {-}{}{}Disconnect\discretionary {-}{}{}Peripheral\discretionary {-}{}{}:error\discretionary {-}{}{}:}{8}{subsubsection.4.3.2.2}
+\contentsline {subsubsection}{\numberline {4.3.2.3}central\discretionary {-}{}{}Manager\discretionary {-}{}{}:did\discretionary {-}{}{}Discover\discretionary {-}{}{}Peripheral\discretionary {-}{}{}:advertisement\discretionary {-}{}{}Data\discretionary {-}{}{}:\discretionary {-}{}{}R\discretionary {-}{}{}S\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}:}{8}{subsubsection.4.3.2.3}
+\contentsline {subsubsection}{\numberline {4.3.2.4}central\discretionary {-}{}{}Manager\discretionary {-}{}{}Did\discretionary {-}{}{}Update\discretionary {-}{}{}State\discretionary {-}{}{}:}{9}{subsubsection.4.3.2.4}
+\contentsline {subsubsection}{\numberline {4.3.2.5}scan\discretionary {-}{}{}For\discretionary {-}{}{}Wristband}{9}{subsubsection.4.3.2.5}
+\contentsline {subsection}{\numberline {4.3.3}Property Documentation}{9}{subsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.1}bt\discretionary {-}{}{}\_\discretionary {-}{}{}periph}{9}{subsubsection.4.3.3.1}
+\contentsline {subsubsection}{\numberline {4.3.3.2}manager}{9}{subsubsection.4.3.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3.3}wristband}{9}{subsubsection.4.3.3.3}
+\contentsline {section}{\numberline {4.4}B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec Class Reference}{9}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{10}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Method Documentation}{10}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}distance\discretionary {-}{}{}:second\discretionary {-}{}{}Point\discretionary {-}{}{}:}{10}{subsubsection.4.4.2.1}
+\contentsline {subsubsection}{\numberline {4.4.2.2}time\discretionary {-}{}{}:end\discretionary {-}{}{}Time\discretionary {-}{}{}:}{10}{subsubsection.4.4.2.2}
+\contentsline {subsubsection}{\numberline {4.4.2.3}write\discretionary {-}{}{}File\discretionary {-}{}{}:to\discretionary {-}{}{}Database\discretionary {-}{}{}:}{10}{subsubsection.4.4.2.3}
+\contentsline {section}{\numberline {4.5}B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec() Category Reference}{11}{section.4.5}
+\contentsline {section}{\numberline {4.6}Database Class Reference}{11}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{11}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Method Documentation}{11}{subsection.4.6.2}
+\contentsline {subsubsection}{\numberline {4.6.2.1}init\discretionary {-}{}{}\_\discretionary {-}{}{}dbfile\discretionary {-}{}{}:}{11}{subsubsection.4.6.2.1}
+\contentsline {subsubsection}{\numberline {4.6.2.2}query\discretionary {-}{}{}:}{12}{subsubsection.4.6.2.2}
+\contentsline {subsection}{\numberline {4.6.3}Property Documentation}{12}{subsection.4.6.3}
+\contentsline {subsubsection}{\numberline {4.6.3.1}columns}{12}{subsubsection.4.6.3.1}
+\contentsline {subsubsection}{\numberline {4.6.3.2}file}{12}{subsubsection.4.6.3.2}
+\contentsline {subsubsection}{\numberline {4.6.3.3}last\discretionary {-}{}{}\_\discretionary {-}{}{}rowid}{12}{subsubsection.4.6.3.3}
+\contentsline {subsubsection}{\numberline {4.6.3.4}results}{12}{subsubsection.4.6.3.4}
+\contentsline {section}{\numberline {4.7}Route\discretionary {-}{}{}Info\discretionary {-}{}{}View\discretionary {-}{}{}Controller Class Reference}{12}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{13}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Method Documentation}{13}{subsection.4.7.2}
+\contentsline {subsubsection}{\numberline {4.7.2.1}load\discretionary {-}{}{}Route\discretionary {-}{}{}Data}{13}{subsubsection.4.7.2.1}
+\contentsline {subsection}{\numberline {4.7.3}Property Documentation}{13}{subsection.4.7.3}
+\contentsline {subsubsection}{\numberline {4.7.3.1}arr\discretionary {-}{}{}Route\discretionary {-}{}{}Coord}{13}{subsubsection.4.7.3.1}
+\contentsline {subsubsection}{\numberline {4.7.3.2}db\discretionary {-}{}{}Manager}{13}{subsubsection.4.7.3.2}
+\contentsline {subsubsection}{\numberline {4.7.3.3}map\discretionary {-}{}{}View}{13}{subsubsection.4.7.3.3}
+\contentsline {subsubsection}{\numberline {4.7.3.4}route\discretionary {-}{}{}I\discretionary {-}{}{}D}{13}{subsubsection.4.7.3.4}
+\contentsline {section}{\numberline {4.8}Route\discretionary {-}{}{}Info\discretionary {-}{}{}View\discretionary {-}{}{}Controller() Category Reference}{13}{section.4.8}
+\contentsline {section}{\numberline {4.9}Routes\discretionary {-}{}{}View\discretionary {-}{}{}Controller Class Reference}{14}{section.4.9}
+\contentsline {section}{\numberline {4.10}Routes\discretionary {-}{}{}View\discretionary {-}{}{}Controller() Category Reference}{14}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{14}{subsection.4.10.1}
+\contentsline {subsection}{\numberline {4.10.2}Method Documentation}{14}{subsection.4.10.2}
+\contentsline {subsubsection}{\numberline {4.10.2.1}load\discretionary {-}{}{}Data}{14}{subsubsection.4.10.2.1}
+\contentsline {subsection}{\numberline {4.10.3}Property Documentation}{14}{subsection.4.10.3}
+\contentsline {subsubsection}{\numberline {4.10.3.1}arr\discretionary {-}{}{}Routes\discretionary {-}{}{}Info}{14}{subsubsection.4.10.3.1}
+\contentsline {subsubsection}{\numberline {4.10.3.2}db\discretionary {-}{}{}Manager}{15}{subsubsection.4.10.3.2}
+\contentsline {subsubsection}{\numberline {4.10.3.3}route\discretionary {-}{}{}I\discretionary {-}{}{}D}{15}{subsubsection.4.10.3.3}
+\contentsline {subsubsection}{\numberline {4.10.3.4}tbl\discretionary {-}{}{}Routes}{15}{subsubsection.4.10.3.4}
+\contentsline {section}{\numberline {4.11}Settings\discretionary {-}{}{}View\discretionary {-}{}{}Controller Class Reference}{15}{section.4.11}
+\contentsline {section}{\numberline {4.12}Settings\discretionary {-}{}{}View\discretionary {-}{}{}Controller() Category Reference}{15}{section.4.12}
+\contentsline {section}{\numberline {4.13}Sync\discretionary {-}{}{}Data\discretionary {-}{}{}View\discretionary {-}{}{}Controller Class Reference}{15}{section.4.13}
+\contentsline {section}{\numberline {4.14}Sync\discretionary {-}{}{}Data\discretionary {-}{}{}View\discretionary {-}{}{}Controller() Category Reference}{16}{section.4.14}
+\contentsline {subsection}{\numberline {4.14.1}Detailed Description}{16}{subsection.4.14.1}
+\contentsline {subsection}{\numberline {4.14.2}Property Documentation}{16}{subsection.4.14.2}
+\contentsline {subsubsection}{\numberline {4.14.2.1}discover}{16}{subsubsection.4.14.2.1}
+\contentsline {subsubsection}{\numberline {4.14.2.2}test\discretionary {-}{}{}Text\discretionary {-}{}{}View}{16}{subsubsection.4.14.2.2}
+\contentsline {section}{\numberline {4.15}View\discretionary {-}{}{}Controller Class Reference}{16}{section.4.15}
+\contentsline {section}{\numberline {4.16}View\discretionary {-}{}{}Controller() Category Reference}{16}{section.4.16}
+\contentsline {subsection}{\numberline {4.16.1}Detailed Description}{16}{subsection.4.16.1}
+\contentsline {chapter}{\numberline {5}File Documentation}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}In\discretionary {-}{}{}Pace/\discretionary {-}{}{}In\discretionary {-}{}{}Pace/\discretionary {-}{}{}B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec.h File Reference}{17}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{17}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Macro Definition Documentation}{17}{subsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.2.1}B\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}U\discretionary {-}{}{}I\discretionary {-}{}{}D}{17}{subsubsection.5.1.2.1}
+\contentsline {subsubsection}{\numberline {5.1.2.2}P\discretionary {-}{}{}I}{18}{subsubsection.5.1.2.2}
+\contentsline {subsubsection}{\numberline {5.1.2.3}R\discretionary {-}{}{}A\discretionary {-}{}{}D\discretionary {-}{}{}I\discretionary {-}{}{}U\discretionary {-}{}{}S}{18}{subsubsection.5.1.2.3}
+\contentsline {subsubsection}{\numberline {5.1.2.4}R\discretionary {-}{}{}W\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}B\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}E\discretionary {-}{}{}R\discretionary {-}{}{}V\discretionary {-}{}{}I\discretionary {-}{}{}C\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}H\discretionary {-}{}{}A\discretionary {-}{}{}N\discretionary {-}{}{}G\discretionary {-}{}{}E\discretionary {-}{}{}D\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}U\discretionary {-}{}{}S\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}N\discretionary {-}{}{}O\discretionary {-}{}{}T\discretionary {-}{}{}I\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}C\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}I\discretionary {-}{}{}O\discretionary {-}{}{}N}{18}{subsubsection.5.1.2.4}
+\contentsline {subsubsection}{\numberline {5.1.2.5}R\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}U\discretionary {-}{}{}I\discretionary {-}{}{}D}{18}{subsubsection.5.1.2.5}
+\contentsline {subsubsection}{\numberline {5.1.2.6}to\discretionary {-}{}{}\_\discretionary {-}{}{}rad}{18}{subsubsection.5.1.2.6}
+\contentsline {subsubsection}{\numberline {5.1.2.7}T\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}U\discretionary {-}{}{}I\discretionary {-}{}{}D}{18}{subsubsection.5.1.2.7}
+\contentsline {chapter}{Index}{19}{section*.14}
