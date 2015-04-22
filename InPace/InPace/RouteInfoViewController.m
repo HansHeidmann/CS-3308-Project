@@ -9,6 +9,7 @@
 #import "RouteInfoViewController.h"
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
+#import "Database.h"
 
 @interface RouteInfoViewController ()
 
@@ -33,11 +34,23 @@
     [self.mapView setZoomEnabled:YES];
     [self.mapView setScrollEnabled:YES];
     
+    self.dbManager = [[Database alloc] init_dbfile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Database.db"]];
+    
+    [self loadRouteData];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(void)loadRouteData {
+    
+    NSString *query = [NSString stringWithFormat:@"select * from Coordinates where RouteID=%lld", self.routeID];
+    
+    [self.arrRouteCoord removeAllObjects];
+    
+    [self.dbManager query:query];
+    self.arrRouteCoord = [[NSMutableArray alloc] initWithArray:self.dbManager.results];
+    
+    
 }
 
 

@@ -9,6 +9,7 @@
 #import "RoutesViewController.h"
 #import "Database.h"
 #import <UIKit/UIKit.h>
+#import "RouteInfoViewController.h"
 
 @interface RoutesViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -18,7 +19,7 @@
 
 @property (nonatomic, strong) NSMutableArray *arrRoutesInfo;
 
-@property NSString *Route;
+@property (nonatomic)long long int routeID;
 
 -(void)loadData;
 
@@ -96,9 +97,17 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    //add stuff here
+    self.routeID = [[[self.arrRoutesInfo objectAtIndex:indexPath.row] objectAtIndex:0] intValue];
     
     [self performSegueWithIdentifier:@"RouteInfoViewController" sender:self];
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    RouteInfoViewController *routeInfoViewController = [segue destinationViewController];
+    
+    routeInfoViewController.routeID = self.routeID;
 }
 
 
