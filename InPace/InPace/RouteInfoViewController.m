@@ -20,16 +20,16 @@
     [super viewDidLoad];
     
     self.mapView.delegate = self;
-    self.mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
+  
     //self.locationManager = [[CLLocationManager alloc] init];
     //self.locationManager.delegate = self;
     
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.0274, -105.2519);
-    MKCoordinateSpan span = MKCoordinateSpanMake(10, 10);
+    MKCoordinateSpan span = MKCoordinateSpanMake(.1, .1);
     MKCoordinateRegion region = MKCoordinateRegionMake(center, span);
     [self.mapView setRegion: region animated: YES];
     
-    [self.mapView setMapType:MKMapTypeStandard];
+    [self.mapView setMapType:MKMapTypeHybrid];
     [self.mapView setZoomEnabled:YES];
     [self.mapView setScrollEnabled:YES];
     

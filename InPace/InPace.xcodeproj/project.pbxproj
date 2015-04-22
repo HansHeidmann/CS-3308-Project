@@ -24,6 +24,7 @@
 		E613185D1AE4766600829760 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E613185C1AE4766500829760 /* ViewController.m */; };
 		E613A1041AE47BF700AACE6B /* SyncDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E613A1031AE47BF700AACE6B /* SyncDataViewController.m */; };
 		E6A05D641AE4DAB100EE47EB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E6A05D631AE4DAB100EE47EB /* Icon.png */; };
+		E6D2B4AB1AE8161300931A2C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D2B4AA1AE8161300931A2C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E613A1021AE47BDA00AACE6B /* SyncDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyncDataViewController.h; sourceTree = "<group>"; };
 		E613A1031AE47BF700AACE6B /* SyncDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncDataViewController.m; sourceTree = "<group>"; };
 		E6A05D631AE4DAB100EE47EB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		E6D2B4AA1AE8161300931A2C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6D2B4AB1AE8161300931A2C /* MapKit.framework in Frameworks */,
 				E61318591AE4734D00829760 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +94,7 @@
 		E61318121AE471F200829760 = {
 			isa = PBXGroup;
 			children = (
+				E6D2B4AA1AE8161300931A2C /* MapKit.framework */,
 				E61318581AE4734D00829760 /* libsqlite3.dylib */,
 				E613181D1AE471F300829760 /* InPace */,
 				E61318371AE471F400829760 /* InPaceTests */,
