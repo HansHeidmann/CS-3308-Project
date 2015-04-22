@@ -1,0 +1,139 @@
+\hypertarget{interfaceBTDiscover}{\section{B\-T\-Discover Class Reference}
+\label{interfaceBTDiscover}\index{B\-T\-Discover@{B\-T\-Discover}}
+}
+
+
+Class responsible for finding and connecting/disconnecting peripheral.  
+
+
+
+
+{\ttfamily \#import $<$B\-T\-Discover.\-h$>$}
+
+Inheritance diagram for B\-T\-Discover\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfaceBTDiscover}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interfaceBTDiscover_a8f79744b7fda346637a523075043b501}{scan\-For\-Wristband}
+\item 
+(void) -\/ \hyperlink{interfaceBTDiscover_aee431dcb8f6de0bbaa3b812e8e48cdbc}{central\-Manager\-Did\-Update\-State\-:}
+\item 
+(void) -\/ \hyperlink{interfaceBTDiscover_af8e43de53c115f15bff0eeccbcdf260a}{central\-Manager\-:did\-Discover\-Peripheral\-:advertisement\-Data\-:\-R\-S\-S\-I\-:}
+\item 
+(void) -\/ \hyperlink{interfaceBTDiscover_a892d491ba386390b6f774c141e278054}{central\-Manager\-:did\-Connect\-Peripheral\-:}
+\item 
+(void) -\/ \hyperlink{interfaceBTDiscover_a97b8fd0dd542e6b41378922977ecbb0d}{central\-Manager\-:did\-Disconnect\-Peripheral\-:error\-:}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceBTSendRec}{B\-T\-Send\-Rec} $\ast$ \hyperlink{interfaceBTDiscover_ac6fc7e50655c8ad721cb1e3a167767b6}{wristband}
+\item 
+C\-B\-Central\-Manager $\ast$ \hyperlink{interfaceBTDiscover_a7e656419213fe4da7163a7fc82fcc2a9}{manager}
+\item 
+C\-B\-Peripheral $\ast$ \hyperlink{interfaceBTDiscover_a611f96cb207ccfc4bc06e33f54183374}{bt\-\_\-periph}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class responsible for finding and connecting/disconnecting peripheral. 
+
+This class is largely a wrapper around the C\-B\-Central\-Manager class and also acts as its delegate object. As such, many of its functions are implemented so the class conforms to the \hyperlink{classCBCentralManagerDelegate-p}{C\-B\-Central\-Manager\-Delegate} protocol. 
+
+\subsection{Method Documentation}
+\hypertarget{interfaceBTDiscover_a892d491ba386390b6f774c141e278054}{\index{B\-T\-Discover@{B\-T\-Discover}!central\-Manager\-:did\-Connect\-Peripheral\-:@{central\-Manager\-:did\-Connect\-Peripheral\-:}}
+\index{central\-Manager\-:did\-Connect\-Peripheral\-:@{central\-Manager\-:did\-Connect\-Peripheral\-:}!BTDiscover@{B\-T\-Discover}}
+\subsubsection[{central\-Manager\-:did\-Connect\-Peripheral\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) central\-Manager\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-B\-Central\-Manager$\ast$)}]{central}
+\item[{didConnectPeripheral:(C\-B\-Peripheral$\ast$)}]{peripheral}
+\end{DoxyParamCaption}
+}}\label{interfaceBTDiscover_a892d491ba386390b6f774c141e278054}
+This function is called when a peripheral was successfully connected to by our C\-B\-Central\-Manager object. Part of the C\-B\-Central\-Manager\-Delegate\-Protocol. 
+\begin{DoxyParams}{Parameters}
+{\em central} & The C\-B\-Central\-Manager object \\
+\hline
+{\em peripheral} & The peripheral that just got connected \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceBTDiscover_a97b8fd0dd542e6b41378922977ecbb0d}{\index{B\-T\-Discover@{B\-T\-Discover}!central\-Manager\-:did\-Disconnect\-Peripheral\-:error\-:@{central\-Manager\-:did\-Disconnect\-Peripheral\-:error\-:}}
+\index{central\-Manager\-:did\-Disconnect\-Peripheral\-:error\-:@{central\-Manager\-:did\-Disconnect\-Peripheral\-:error\-:}!BTDiscover@{B\-T\-Discover}}
+\subsubsection[{central\-Manager\-:did\-Disconnect\-Peripheral\-:error\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) central\-Manager\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-B\-Central\-Manager$\ast$)}]{central}
+\item[{didDisconnectPeripheral:(C\-B\-Peripheral$\ast$)}]{peripheral}
+\item[{error:(N\-S\-Error$\ast$)}]{error}
+\end{DoxyParamCaption}
+}}\label{interfaceBTDiscover_a97b8fd0dd542e6b41378922977ecbb0d}
+This function is called when a peripheral has disconnected. Part of the \hyperlink{classCBCentralManagerDelegate-p}{C\-B\-Central\-Manager\-Delegate} protocol. 
+\begin{DoxyParams}{Parameters}
+{\em central} & The central manager object \\
+\hline
+{\em peripheral} & The peripheral that has been disconnected \\
+\hline
+{\em error} & The cause of faliure, if any \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceBTDiscover_af8e43de53c115f15bff0eeccbcdf260a}{\index{B\-T\-Discover@{B\-T\-Discover}!central\-Manager\-:did\-Discover\-Peripheral\-:advertisement\-Data\-:\-R\-S\-S\-I\-:@{central\-Manager\-:did\-Discover\-Peripheral\-:advertisement\-Data\-:\-R\-S\-S\-I\-:}}
+\index{central\-Manager\-:did\-Discover\-Peripheral\-:advertisement\-Data\-:\-R\-S\-S\-I\-:@{central\-Manager\-:did\-Discover\-Peripheral\-:advertisement\-Data\-:\-R\-S\-S\-I\-:}!BTDiscover@{B\-T\-Discover}}
+\subsubsection[{central\-Manager\-:did\-Discover\-Peripheral\-:advertisement\-Data\-:\-R\-S\-S\-I\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) central\-Manager\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-B\-Central\-Manager$\ast$)}]{central}
+\item[{didDiscoverPeripheral:(C\-B\-Peripheral$\ast$)}]{peripheral}
+\item[{advertisementData:(N\-S\-Dictionary$\ast$)}]{advertisement\-Data}
+\item[{RSSI:(N\-S\-Number$\ast$)}]{R\-S\-S\-I}
+\end{DoxyParamCaption}
+}}\label{interfaceBTDiscover_af8e43de53c115f15bff0eeccbcdf260a}
+This function is called when a peripheral was discovered during scanning by the C\-B\-Central\-Manager object. Part of the \hyperlink{classCBCentralManagerDelegate-p}{C\-B\-Central\-Manager\-Delegate} protocol. 
+\begin{DoxyParams}{Parameters}
+{\em central} & The central manager object \\
+\hline
+{\em peripheral} & The discovered peripheral \\
+\hline
+{\em advertisement\-Data} & The advertisement data (if any) \\
+\hline
+{\em R\-S\-S\-I} & The signal strength \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceBTDiscover_aee431dcb8f6de0bbaa3b812e8e48cdbc}{\index{B\-T\-Discover@{B\-T\-Discover}!central\-Manager\-Did\-Update\-State\-:@{central\-Manager\-Did\-Update\-State\-:}}
+\index{central\-Manager\-Did\-Update\-State\-:@{central\-Manager\-Did\-Update\-State\-:}!BTDiscover@{B\-T\-Discover}}
+\subsubsection[{central\-Manager\-Did\-Update\-State\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) central\-Manager\-Did\-Update\-State\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-B\-Central\-Manager$\ast$)}]{central}
+\end{DoxyParamCaption}
+}}\label{interfaceBTDiscover_aee431dcb8f6de0bbaa3b812e8e48cdbc}
+This function is called whenever the C\-B\-Central\-Manager object changes its state. This function is required by the \hyperlink{classCBCentralManagerDelegate-p}{C\-B\-Central\-Manager\-Delegate} protocol. 
+\begin{DoxyParams}{Parameters}
+{\em central} & The central manager object \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceBTDiscover_a8f79744b7fda346637a523075043b501}{\index{B\-T\-Discover@{B\-T\-Discover}!scan\-For\-Wristband@{scan\-For\-Wristband}}
+\index{scan\-For\-Wristband@{scan\-For\-Wristband}!BTDiscover@{B\-T\-Discover}}
+\subsubsection[{scan\-For\-Wristband}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) scan\-For\-Wristband 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interfaceBTDiscover_a8f79744b7fda346637a523075043b501}
+Initiate scan for the In\-Pace wristband 
+
+\subsection{Property Documentation}
+\hypertarget{interfaceBTDiscover_a611f96cb207ccfc4bc06e33f54183374}{\index{B\-T\-Discover@{B\-T\-Discover}!bt\-\_\-periph@{bt\-\_\-periph}}
+\index{bt\-\_\-periph@{bt\-\_\-periph}!BTDiscover@{B\-T\-Discover}}
+\subsubsection[{bt\-\_\-periph}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-B\-Peripheral$\ast$) bt\-\_\-periph\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [strong]}}}\label{interfaceBTDiscover_a611f96cb207ccfc4bc06e33f54183374}
+Pointer to the discovered Bluetooth peripheral \hypertarget{interfaceBTDiscover_a7e656419213fe4da7163a7fc82fcc2a9}{\index{B\-T\-Discover@{B\-T\-Discover}!manager@{manager}}
+\index{manager@{manager}!BTDiscover@{B\-T\-Discover}}
+\subsubsection[{manager}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-B\-Central\-Manager$\ast$) manager\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [strong]}}}\label{interfaceBTDiscover_a7e656419213fe4da7163a7fc82fcc2a9}
+Pointer to the internal central manager object \hypertarget{interfaceBTDiscover_ac6fc7e50655c8ad721cb1e3a167767b6}{\index{B\-T\-Discover@{B\-T\-Discover}!wristband@{wristband}}
+\index{wristband@{wristband}!BTDiscover@{B\-T\-Discover}}
+\subsubsection[{wristband}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf B\-T\-Send\-Rec}$\ast$) wristband\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interfaceBTDiscover_ac6fc7e50655c8ad721cb1e3a167767b6}
+Pointer to class to handle sending and receiving data to and from the Bluetooth peripheral 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+In\-Pace/\-In\-Pace/B\-T\-Discover.\-h\item 
+In\-Pace/\-In\-Pace/B\-T\-Discover.\-m\end{DoxyCompactItemize}

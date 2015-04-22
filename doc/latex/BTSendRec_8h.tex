@@ -1,0 +1,67 @@
+\hypertarget{BTSendRec_8h}{\section{In\-Pace/\-In\-Pace/\-B\-T\-Send\-Rec.h File Reference}
+\label{BTSendRec_8h}\index{In\-Pace/\-In\-Pace/\-B\-T\-Send\-Rec.\-h@{In\-Pace/\-In\-Pace/\-B\-T\-Send\-Rec.\-h}}
+}
+
+
+Bluetooth send and receive functionality.  
+
+
+{\ttfamily \#import $<$Foundation/\-Foundation.\-h$>$}\\*
+{\ttfamily \#import $<$Core\-Bluetooth/\-Core\-Bluetooth.\-h$>$}\\*
+{\ttfamily \#import $<$math.\-h$>$}\\*
+{\ttfamily \#import $<$time.\-h$>$}\\*
+{\ttfamily \#import \char`\"{}Database.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{interfaceBTSendRec}{B\-T\-Send\-Rec}
+\begin{DoxyCompactList}\small\item\em Class responsible for doing the data transmission to the connected peripheral. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{BTSendRec_8h_a417aa5bd52938209ee4c5d2b466183d2}{B\-L\-E\-\_\-\-U\-U\-I\-D}~\mbox{[}C\-B\-U\-U\-I\-D U\-U\-I\-D\-With\-String\-: @\char`\"{}713\-D0000-\/503\-E-\/4\-C75-\/\-B\-A94-\/3148\-F18\-D941\-E\char`\"{}\mbox{]}
+\item 
+\#define \hyperlink{BTSendRec_8h_a15354b2936317318e52140422b3855af}{R\-X\-\_\-\-U\-U\-I\-D}~\mbox{[}C\-B\-U\-U\-I\-D U\-U\-I\-D\-With\-String\-: @\char`\"{}713\-D0002-\/503\-E-\/4\-C75-\/\-B\-A94-\/3148\-F18\-D941\-E\char`\"{}\mbox{]}
+\item 
+\#define \hyperlink{BTSendRec_8h_a7badd17f838611be1c30ab64f996735d}{T\-X\-\_\-\-U\-U\-I\-D}~\mbox{[}C\-B\-U\-U\-I\-D U\-U\-I\-D\-With\-String\-: @\char`\"{}713\-D0003-\/503\-E-\/4\-C75-\/\-B\-A94-\/3148\-F18\-D941\-E\char`\"{}\mbox{]}
+\item 
+\#define \hyperlink{BTSendRec_8h_a85902bfad7a3c74def78040664cad6df}{R\-W\-T\-\_\-\-B\-L\-E\-\_\-\-S\-E\-R\-V\-I\-C\-E\-\_\-\-C\-H\-A\-N\-G\-E\-D\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N}~@\char`\"{}stuff goes here\char`\"{}
+\item 
+\#define \hyperlink{BTSendRec_8h_aa4f8ea40228c3c3a9a7143b1d1ad8956}{R\-A\-D\-I\-U\-S}~6371000
+\item 
+\#define \hyperlink{BTSendRec_8h_a598a3330b3c21701223ee0ca14316eca}{P\-I}~3.\-1415926
+\item 
+\#define \hyperlink{BTSendRec_8h_aeb6c724b0fa46d2ec6ab99cf77f2edd9}{to\-\_\-rad}(x)~((double) x $\ast$ \hyperlink{BTSendRec_8h_a598a3330b3c21701223ee0ca14316eca}{P\-I} / 180)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Bluetooth send and receive functionality. This file defines the necessary functions and macros to handle reading data from the In\-Pace wristband, parsing it, submitting it to the database, reading values out of the database, and sending the necessary data to the wristband. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{BTSendRec_8h_a417aa5bd52938209ee4c5d2b466183d2}{\index{B\-T\-Send\-Rec.\-h@{B\-T\-Send\-Rec.\-h}!B\-L\-E\-\_\-\-U\-U\-I\-D@{B\-L\-E\-\_\-\-U\-U\-I\-D}}
+\index{B\-L\-E\-\_\-\-U\-U\-I\-D@{B\-L\-E\-\_\-\-U\-U\-I\-D}!BTSendRec.h@{B\-T\-Send\-Rec.\-h}}
+\subsubsection[{B\-L\-E\-\_\-\-U\-U\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-L\-E\-\_\-\-U\-U\-I\-D~\mbox{[}C\-B\-U\-U\-I\-D U\-U\-I\-D\-With\-String\-: @\char`\"{}713\-D0000-\/503\-E-\/4\-C75-\/\-B\-A94-\/3148\-F18\-D941\-E\char`\"{}\mbox{]}}}\label{BTSendRec_8h_a417aa5bd52938209ee4c5d2b466183d2}
+This macro expands to a C\-B\-U\-U\-I\-D object that represents the U\-U\-I\-D of the Bluetooth shield used in the In\-Pace wristband. \hypertarget{BTSendRec_8h_a598a3330b3c21701223ee0ca14316eca}{\index{B\-T\-Send\-Rec.\-h@{B\-T\-Send\-Rec.\-h}!P\-I@{P\-I}}
+\index{P\-I@{P\-I}!BTSendRec.h@{B\-T\-Send\-Rec.\-h}}
+\subsubsection[{P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I~3.\-1415926}}\label{BTSendRec_8h_a598a3330b3c21701223ee0ca14316eca}
+This macro expands to the value of pi. \hypertarget{BTSendRec_8h_aa4f8ea40228c3c3a9a7143b1d1ad8956}{\index{B\-T\-Send\-Rec.\-h@{B\-T\-Send\-Rec.\-h}!R\-A\-D\-I\-U\-S@{R\-A\-D\-I\-U\-S}}
+\index{R\-A\-D\-I\-U\-S@{R\-A\-D\-I\-U\-S}!BTSendRec.h@{B\-T\-Send\-Rec.\-h}}
+\subsubsection[{R\-A\-D\-I\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-A\-D\-I\-U\-S~6371000}}\label{BTSendRec_8h_aa4f8ea40228c3c3a9a7143b1d1ad8956}
+This macro expands to the mean radius of the Earth in meters. \hypertarget{BTSendRec_8h_a85902bfad7a3c74def78040664cad6df}{\index{B\-T\-Send\-Rec.\-h@{B\-T\-Send\-Rec.\-h}!R\-W\-T\-\_\-\-B\-L\-E\-\_\-\-S\-E\-R\-V\-I\-C\-E\-\_\-\-C\-H\-A\-N\-G\-E\-D\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N@{R\-W\-T\-\_\-\-B\-L\-E\-\_\-\-S\-E\-R\-V\-I\-C\-E\-\_\-\-C\-H\-A\-N\-G\-E\-D\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N}}
+\index{R\-W\-T\-\_\-\-B\-L\-E\-\_\-\-S\-E\-R\-V\-I\-C\-E\-\_\-\-C\-H\-A\-N\-G\-E\-D\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N@{R\-W\-T\-\_\-\-B\-L\-E\-\_\-\-S\-E\-R\-V\-I\-C\-E\-\_\-\-C\-H\-A\-N\-G\-E\-D\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N}!BTSendRec.h@{B\-T\-Send\-Rec.\-h}}
+\subsubsection[{R\-W\-T\-\_\-\-B\-L\-E\-\_\-\-S\-E\-R\-V\-I\-C\-E\-\_\-\-C\-H\-A\-N\-G\-E\-D\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-W\-T\-\_\-\-B\-L\-E\-\_\-\-S\-E\-R\-V\-I\-C\-E\-\_\-\-C\-H\-A\-N\-G\-E\-D\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N~@\char`\"{}stuff goes here\char`\"{}}}\label{BTSendRec_8h_a85902bfad7a3c74def78040664cad6df}
+No idea what this does or why it's here, honestly... \hypertarget{BTSendRec_8h_a15354b2936317318e52140422b3855af}{\index{B\-T\-Send\-Rec.\-h@{B\-T\-Send\-Rec.\-h}!R\-X\-\_\-\-U\-U\-I\-D@{R\-X\-\_\-\-U\-U\-I\-D}}
+\index{R\-X\-\_\-\-U\-U\-I\-D@{R\-X\-\_\-\-U\-U\-I\-D}!BTSendRec.h@{B\-T\-Send\-Rec.\-h}}
+\subsubsection[{R\-X\-\_\-\-U\-U\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-X\-\_\-\-U\-U\-I\-D~\mbox{[}C\-B\-U\-U\-I\-D U\-U\-I\-D\-With\-String\-: @\char`\"{}713\-D0002-\/503\-E-\/4\-C75-\/\-B\-A94-\/3148\-F18\-D941\-E\char`\"{}\mbox{]}}}\label{BTSendRec_8h_a15354b2936317318e52140422b3855af}
+This macro expands to a C\-B\-U\-U\-I\-D object that represents the U\-U\-I\-D of the Read characteristic on the Bluetooth shield. \hypertarget{BTSendRec_8h_aeb6c724b0fa46d2ec6ab99cf77f2edd9}{\index{B\-T\-Send\-Rec.\-h@{B\-T\-Send\-Rec.\-h}!to\-\_\-rad@{to\-\_\-rad}}
+\index{to\-\_\-rad@{to\-\_\-rad}!BTSendRec.h@{B\-T\-Send\-Rec.\-h}}
+\subsubsection[{to\-\_\-rad}]{\setlength{\rightskip}{0pt plus 5cm}\#define to\-\_\-rad(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((double) x $\ast$ {\bf P\-I} / 180)}}\label{BTSendRec_8h_aeb6c724b0fa46d2ec6ab99cf77f2edd9}
+This macro takes the value x and converts it into radians. \hypertarget{BTSendRec_8h_a7badd17f838611be1c30ab64f996735d}{\index{B\-T\-Send\-Rec.\-h@{B\-T\-Send\-Rec.\-h}!T\-X\-\_\-\-U\-U\-I\-D@{T\-X\-\_\-\-U\-U\-I\-D}}
+\index{T\-X\-\_\-\-U\-U\-I\-D@{T\-X\-\_\-\-U\-U\-I\-D}!BTSendRec.h@{B\-T\-Send\-Rec.\-h}}
+\subsubsection[{T\-X\-\_\-\-U\-U\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-X\-\_\-\-U\-U\-I\-D~\mbox{[}C\-B\-U\-U\-I\-D U\-U\-I\-D\-With\-String\-: @\char`\"{}713\-D0003-\/503\-E-\/4\-C75-\/\-B\-A94-\/3148\-F18\-D941\-E\char`\"{}\mbox{]}}}\label{BTSendRec_8h_a7badd17f838611be1c30ab64f996735d}
+This macro expands to a C\-B\-U\-U\-I\-D object that represents the U\-U\-I\-D of the Write characteristic on the Bluetooth shield. 

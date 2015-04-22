@@ -1,0 +1,230 @@
+\begin{theindex}
+
+  \item {App\discretionary {-}{}{}Delegate}, \hyperpage{7}
+  \item {App\discretionary {-}{}{}Delegate()}, \hyperpage{7}
+  \item {arr\discretionary {-}{}{}Route\discretionary {-}{}{}Coord}
+    \subitem {Route\discretionary {-}{}{}Info\discretionary {-}{}{}View\discretionary {-}{}{}Controller}, 
+		\hyperpage{13}
+  \item {arr\discretionary {-}{}{}Routes\discretionary {-}{}{}Info}
+    \subitem {Routes\discretionary {-}{}{}View\discretionary {-}{}{}Controller()}, 
+		\hyperpage{14}
+
+  \indexspace
+
+  \item {B\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}U\discretionary {-}{}{}I\discretionary {-}{}{}D}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec.\discretionary {-}{}{}h}, 
+		\hyperpage{17}
+  \item {B\discretionary {-}{}{}T\discretionary {-}{}{}Discover}, 
+		\hyperpage{7}
+    \subitem {bt\discretionary {-}{}{}\_\discretionary {-}{}{}periph}, 
+		\hyperpage{9}
+    \subitem {central\discretionary {-}{}{}Manager\discretionary {-}{}{}:did\discretionary {-}{}{}Connect\discretionary {-}{}{}Peripheral\discretionary {-}{}{}:}, 
+		\hyperpage{8}
+    \subitem {central\discretionary {-}{}{}Manager\discretionary {-}{}{}:did\discretionary {-}{}{}Disconnect\discretionary {-}{}{}Peripheral\discretionary {-}{}{}:error\discretionary {-}{}{}:}, 
+		\hyperpage{8}
+    \subitem {central\discretionary {-}{}{}Manager\discretionary {-}{}{}:did\discretionary {-}{}{}Discover\discretionary {-}{}{}Peripheral\discretionary {-}{}{}:advertisement\discretionary {-}{}{}Data\discretionary {-}{}{}:\discretionary {-}{}{}R\discretionary {-}{}{}S\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}:}, 
+		\hyperpage{8}
+    \subitem {central\discretionary {-}{}{}Manager\discretionary {-}{}{}Did\discretionary {-}{}{}Update\discretionary {-}{}{}State\discretionary {-}{}{}:}, 
+		\hyperpage{9}
+    \subitem {manager}, \hyperpage{9}
+    \subitem {scan\discretionary {-}{}{}For\discretionary {-}{}{}Wristband}, 
+		\hyperpage{9}
+    \subitem {wristband}, \hyperpage{9}
+  \item {B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec}, 
+		\hyperpage{9}
+    \subitem {distance\discretionary {-}{}{}:second\discretionary {-}{}{}Point\discretionary {-}{}{}:}, 
+		\hyperpage{10}
+    \subitem {time\discretionary {-}{}{}:end\discretionary {-}{}{}Time\discretionary {-}{}{}:}, 
+		\hyperpage{10}
+    \subitem {write\discretionary {-}{}{}File\discretionary {-}{}{}:to\discretionary {-}{}{}Database\discretionary {-}{}{}:}, 
+		\hyperpage{10}
+  \item {B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec()}, 
+		\hyperpage{11}
+  \item {B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec.\discretionary {-}{}{}h}
+    \subitem {B\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}U\discretionary {-}{}{}I\discretionary {-}{}{}D}, 
+		\hyperpage{17}
+    \subitem {P\discretionary {-}{}{}I}, \hyperpage{17}
+    \subitem {R\discretionary {-}{}{}A\discretionary {-}{}{}D\discretionary {-}{}{}I\discretionary {-}{}{}U\discretionary {-}{}{}S}, 
+		\hyperpage{18}
+    \subitem {R\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}U\discretionary {-}{}{}I\discretionary {-}{}{}D}, 
+		\hyperpage{18}
+    \subitem {T\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}U\discretionary {-}{}{}I\discretionary {-}{}{}D}, 
+		\hyperpage{18}
+    \subitem {to\discretionary {-}{}{}\_\discretionary {-}{}{}rad}, 
+		\hyperpage{18}
+  \item {bt\discretionary {-}{}{}\_\discretionary {-}{}{}periph}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Discover}, 
+		\hyperpage{9}
+
+  \indexspace
+
+  \item {central\discretionary {-}{}{}Manager\discretionary {-}{}{}:did\discretionary {-}{}{}Connect\discretionary {-}{}{}Peripheral\discretionary {-}{}{}:}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Discover}, 
+		\hyperpage{8}
+  \item {central\discretionary {-}{}{}Manager\discretionary {-}{}{}:did\discretionary {-}{}{}Disconnect\discretionary {-}{}{}Peripheral\discretionary {-}{}{}:error\discretionary {-}{}{}:}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Discover}, 
+		\hyperpage{8}
+  \item {central\discretionary {-}{}{}Manager\discretionary {-}{}{}:did\discretionary {-}{}{}Discover\discretionary {-}{}{}Peripheral\discretionary {-}{}{}:advertisement\discretionary {-}{}{}Data\discretionary {-}{}{}:\discretionary {-}{}{}R\discretionary {-}{}{}S\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}:}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Discover}, 
+		\hyperpage{8}
+  \item {central\discretionary {-}{}{}Manager\discretionary {-}{}{}Did\discretionary {-}{}{}Update\discretionary {-}{}{}State\discretionary {-}{}{}:}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Discover}, 
+		\hyperpage{9}
+  \item {columns}
+    \subitem {Database}, \hyperpage{12}
+
+  \indexspace
+
+  \item {Database}, \hyperpage{11}
+    \subitem {columns}, \hyperpage{12}
+    \subitem {file}, \hyperpage{12}
+    \subitem {init\discretionary {-}{}{}\_\discretionary {-}{}{}dbfile\discretionary {-}{}{}:}, 
+		\hyperpage{11}
+    \subitem {last\discretionary {-}{}{}\_\discretionary {-}{}{}rowid}, 
+		\hyperpage{12}
+    \subitem {query\discretionary {-}{}{}:}, \hyperpage{11}
+    \subitem {results}, \hyperpage{12}
+  \item {db\discretionary {-}{}{}Manager}
+    \subitem {Route\discretionary {-}{}{}Info\discretionary {-}{}{}View\discretionary {-}{}{}Controller}, 
+		\hyperpage{13}
+    \subitem {Routes\discretionary {-}{}{}View\discretionary {-}{}{}Controller()}, 
+		\hyperpage{14}
+  \item {discover}
+    \subitem {Sync\discretionary {-}{}{}Data\discretionary {-}{}{}View\discretionary {-}{}{}Controller()}, 
+		\hyperpage{16}
+  \item {distance\discretionary {-}{}{}:second\discretionary {-}{}{}Point\discretionary {-}{}{}:}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec}, 
+		\hyperpage{10}
+
+  \indexspace
+
+  \item {file}
+    \subitem {Database}, \hyperpage{12}
+
+  \indexspace
+
+  \item {In\discretionary {-}{}{}Pace/\discretionary {-}{}{}In\discretionary {-}{}{}Pace/\discretionary {-}{}{}B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec.\discretionary {-}{}{}h}, 
+		\hyperpage{17}
+  \item {init\discretionary {-}{}{}\_\discretionary {-}{}{}dbfile\discretionary {-}{}{}:}
+    \subitem {Database}, \hyperpage{11}
+
+  \indexspace
+
+  \item {last\discretionary {-}{}{}\_\discretionary {-}{}{}rowid}
+    \subitem {Database}, \hyperpage{12}
+  \item {load\discretionary {-}{}{}Data}
+    \subitem {Routes\discretionary {-}{}{}View\discretionary {-}{}{}Controller()}, 
+		\hyperpage{14}
+  \item {load\discretionary {-}{}{}Route\discretionary {-}{}{}Data}
+    \subitem {Route\discretionary {-}{}{}Info\discretionary {-}{}{}View\discretionary {-}{}{}Controller}, 
+		\hyperpage{13}
+
+  \indexspace
+
+  \item {manager}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Discover}, 
+		\hyperpage{9}
+  \item {map\discretionary {-}{}{}View}
+    \subitem {Route\discretionary {-}{}{}Info\discretionary {-}{}{}View\discretionary {-}{}{}Controller}, 
+		\hyperpage{13}
+
+  \indexspace
+
+  \item {P\discretionary {-}{}{}I}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec.\discretionary {-}{}{}h}, 
+		\hyperpage{17}
+
+  \indexspace
+
+  \item {query\discretionary {-}{}{}:}
+    \subitem {Database}, \hyperpage{11}
+
+  \indexspace
+
+  \item {R\discretionary {-}{}{}A\discretionary {-}{}{}D\discretionary {-}{}{}I\discretionary {-}{}{}U\discretionary {-}{}{}S}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec.\discretionary {-}{}{}h}, 
+		\hyperpage{18}
+  \item {R\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}U\discretionary {-}{}{}I\discretionary {-}{}{}D}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec.\discretionary {-}{}{}h}, 
+		\hyperpage{18}
+  \item {results}
+    \subitem {Database}, \hyperpage{12}
+  \item {route\discretionary {-}{}{}I\discretionary {-}{}{}D}
+    \subitem {Route\discretionary {-}{}{}Info\discretionary {-}{}{}View\discretionary {-}{}{}Controller}, 
+		\hyperpage{13}
+    \subitem {Routes\discretionary {-}{}{}View\discretionary {-}{}{}Controller()}, 
+		\hyperpage{15}
+  \item {Route\discretionary {-}{}{}Info\discretionary {-}{}{}View\discretionary {-}{}{}Controller}, 
+		\hyperpage{12}
+    \subitem {arr\discretionary {-}{}{}Route\discretionary {-}{}{}Coord}, 
+		\hyperpage{13}
+    \subitem {db\discretionary {-}{}{}Manager}, \hyperpage{13}
+    \subitem {load\discretionary {-}{}{}Route\discretionary {-}{}{}Data}, 
+		\hyperpage{13}
+    \subitem {map\discretionary {-}{}{}View}, \hyperpage{13}
+    \subitem {route\discretionary {-}{}{}I\discretionary {-}{}{}D}, 
+		\hyperpage{13}
+  \item {Route\discretionary {-}{}{}Info\discretionary {-}{}{}View\discretionary {-}{}{}Controller()}, 
+		\hyperpage{13}
+  \item {Routes\discretionary {-}{}{}View\discretionary {-}{}{}Controller}, 
+		\hyperpage{14}
+  \item {Routes\discretionary {-}{}{}View\discretionary {-}{}{}Controller()}, 
+		\hyperpage{14}
+    \subitem {arr\discretionary {-}{}{}Routes\discretionary {-}{}{}Info}, 
+		\hyperpage{14}
+    \subitem {db\discretionary {-}{}{}Manager}, \hyperpage{14}
+    \subitem {load\discretionary {-}{}{}Data}, \hyperpage{14}
+    \subitem {route\discretionary {-}{}{}I\discretionary {-}{}{}D}, 
+		\hyperpage{15}
+    \subitem {tbl\discretionary {-}{}{}Routes}, \hyperpage{15}
+
+  \indexspace
+
+  \item {scan\discretionary {-}{}{}For\discretionary {-}{}{}Wristband}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Discover}, 
+		\hyperpage{9}
+  \item {Settings\discretionary {-}{}{}View\discretionary {-}{}{}Controller}, 
+		\hyperpage{15}
+  \item {Settings\discretionary {-}{}{}View\discretionary {-}{}{}Controller()}, 
+		\hyperpage{15}
+  \item {Sync\discretionary {-}{}{}Data\discretionary {-}{}{}View\discretionary {-}{}{}Controller}, 
+		\hyperpage{15}
+  \item {Sync\discretionary {-}{}{}Data\discretionary {-}{}{}View\discretionary {-}{}{}Controller()}, 
+		\hyperpage{16}
+    \subitem {discover}, \hyperpage{16}
+    \subitem {test\discretionary {-}{}{}Text\discretionary {-}{}{}View}, 
+		\hyperpage{16}
+
+  \indexspace
+
+  \item {T\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}U\discretionary {-}{}{}I\discretionary {-}{}{}D}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec.\discretionary {-}{}{}h}, 
+		\hyperpage{18}
+  \item {tbl\discretionary {-}{}{}Routes}
+    \subitem {Routes\discretionary {-}{}{}View\discretionary {-}{}{}Controller()}, 
+		\hyperpage{15}
+  \item {test\discretionary {-}{}{}Text\discretionary {-}{}{}View}
+    \subitem {Sync\discretionary {-}{}{}Data\discretionary {-}{}{}View\discretionary {-}{}{}Controller()}, 
+		\hyperpage{16}
+  \item {time\discretionary {-}{}{}:end\discretionary {-}{}{}Time\discretionary {-}{}{}:}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec}, 
+		\hyperpage{10}
+  \item {to\discretionary {-}{}{}\_\discretionary {-}{}{}rad}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec.\discretionary {-}{}{}h}, 
+		\hyperpage{18}
+
+  \indexspace
+
+  \item {View\discretionary {-}{}{}Controller}, \hyperpage{16}
+  \item {View\discretionary {-}{}{}Controller()}, \hyperpage{16}
+
+  \indexspace
+
+  \item {wristband}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Discover}, 
+		\hyperpage{9}
+  \item {write\discretionary {-}{}{}File\discretionary {-}{}{}:to\discretionary {-}{}{}Database\discretionary {-}{}{}:}
+    \subitem {B\discretionary {-}{}{}T\discretionary {-}{}{}Send\discretionary {-}{}{}Rec}, 
+		\hyperpage{10}
+
+\end{theindex}

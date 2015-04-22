@@ -1,0 +1,95 @@
+\hypertarget{interfaceDatabase}{\section{Database Class Reference}
+\label{interfaceDatabase}\index{Database@{Database}}
+}
+
+
+\hyperlink{interfaceDatabase}{Database} manager class.  
+
+
+
+
+{\ttfamily \#import $<$Database.\-h$>$}
+
+Inheritance diagram for Database\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfaceDatabase}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(instancetype) -\/ \hyperlink{interfaceDatabase_a631bb1f508de7a8397e51319c7d81100}{init\-\_\-dbfile\-:}
+\item 
+(int) -\/ \hyperlink{interfaceDatabase_a5cee36b8ec7d12bb7c43fc3c2581d848}{query\-:}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-String $\ast$ \hyperlink{interfaceDatabase_a430fb12f30886311e10ce028918c11fa}{file}
+\item 
+N\-S\-Mutable\-Array $\ast$ \hyperlink{interfaceDatabase_aaf90264ccd741532c3b9258a82faa921}{results}
+\item 
+N\-S\-Mutable\-Array $\ast$ \hyperlink{interfaceDatabase_a1bd01161d2f5a26a74edccc2288b5774}{columns}
+\item 
+long long int \hyperlink{interfaceDatabase_ac733c637b2bf08cae3005686867338f9}{last\-\_\-rowid}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{interfaceDatabase}{Database} manager class. 
+
+This class maintains an S\-Q\-L\-I\-T\-E database to hold the various Routes, Coordinates, and Times. 
+
+\subsection{Method Documentation}
+\hypertarget{interfaceDatabase_a631bb1f508de7a8397e51319c7d81100}{\index{Database@{Database}!init\-\_\-dbfile\-:@{init\-\_\-dbfile\-:}}
+\index{init\-\_\-dbfile\-:@{init\-\_\-dbfile\-:}!Database@{Database}}
+\subsubsection[{init\-\_\-dbfile\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (instancetype) init\-\_\-dbfile\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{filename}
+\end{DoxyParamCaption}
+}}\label{interfaceDatabase_a631bb1f508de7a8397e51319c7d81100}
+Initialization function for the \hyperlink{interfaceDatabase}{Database} object. The \hyperlink{interfaceDatabase}{Database} will use the file given by filename to store and load its data. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to use as the database file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created \hyperlink{interfaceDatabase}{Database} object is returned 
+\end{DoxyReturn}
+\hypertarget{interfaceDatabase_a5cee36b8ec7d12bb7c43fc3c2581d848}{\index{Database@{Database}!query\-:@{query\-:}}
+\index{query\-:@{query\-:}!Database@{Database}}
+\subsubsection[{query\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (int) query\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{query}
+\end{DoxyParamCaption}
+}}\label{interfaceDatabase_a5cee36b8ec7d12bb7c43fc3c2581d848}
+The main function of the database. This function takes an S\-Q\-L statement given by query and executes it on the database. If the satement executed was a S\-E\-L\-E\-C\-T statement, then the results will be stored in the arrays results and columns. Any other statement will simply results in these two arrays being empty. query() returns a status code from the S\-Q\-L\-I\-T\-E3 library to indicate the the success of the statement. 
+\begin{DoxyParams}{Parameters}
+{\em query} & The desired S\-Q\-L\-I\-T\-E statement to be executed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An S\-Q\-L\-I\-T\-E3 result code indicating the status of the statement 
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\hypertarget{interfaceDatabase_a1bd01161d2f5a26a74edccc2288b5774}{\index{Database@{Database}!columns@{columns}}
+\index{columns@{columns}!Database@{Database}}
+\subsubsection[{columns}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Mutable\-Array$\ast$) columns\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}}}\label{interfaceDatabase_a1bd01161d2f5a26a74edccc2288b5774}
+Array to hold names of columns in result \hypertarget{interfaceDatabase_a430fb12f30886311e10ce028918c11fa}{\index{Database@{Database}!file@{file}}
+\index{file@{file}!Database@{Database}}
+\subsubsection[{file}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) file\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}}}\label{interfaceDatabase_a430fb12f30886311e10ce028918c11fa}
+Name of database file \hypertarget{interfaceDatabase_ac733c637b2bf08cae3005686867338f9}{\index{Database@{Database}!last\-\_\-rowid@{last\-\_\-rowid}}
+\index{last\-\_\-rowid@{last\-\_\-rowid}!Database@{Database}}
+\subsubsection[{last\-\_\-rowid}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (long long int) last\-\_\-rowid\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interfaceDatabase_ac733c637b2bf08cae3005686867338f9}
+Row\-I\-D of the last thing inserted into the database \hypertarget{interfaceDatabase_aaf90264ccd741532c3b9258a82faa921}{\index{Database@{Database}!results@{results}}
+\index{results@{results}!Database@{Database}}
+\subsubsection[{results}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Mutable\-Array$\ast$) results\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}}}\label{interfaceDatabase_aaf90264ccd741532c3b9258a82faa921}
+Array to hold query results 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+In\-Pace/\-In\-Pace/Database.\-h\item 
+In\-Pace/\-In\-Pace/Database.\-m\end{DoxyCompactItemize}

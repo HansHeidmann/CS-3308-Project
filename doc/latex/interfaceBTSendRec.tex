@@ -1,0 +1,92 @@
+\hypertarget{interfaceBTSendRec}{\section{B\-T\-Send\-Rec Class Reference}
+\label{interfaceBTSendRec}\index{B\-T\-Send\-Rec@{B\-T\-Send\-Rec}}
+}
+
+
+Class responsible for doing the data transmission to the connected peripheral.  
+
+
+
+
+{\ttfamily \#import $<$B\-T\-Send\-Rec.\-h$>$}
+
+Inheritance diagram for B\-T\-Send\-Rec\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfaceBTSendRec}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interfaceBTSendRec_ac2435c7aa9df21d6d3ffc2b570c15fb7}{write\-File\-:to\-Database\-:}
+\item 
+(double) -\/ \hyperlink{interfaceBTSendRec_afebf4e21bbbc80a1fdd04f1d5920d258}{distance\-:second\-Point\-:}
+\item 
+(int) -\/ \hyperlink{interfaceBTSendRec_a2c40741a15aca7b2fae51be9e469ccd8}{time\-:end\-Time\-:}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class responsible for doing the data transmission to the connected peripheral. 
+
+This class is largely a wrapper around C\-B\-Peripheral and also acts as its delegate object. As such, many functions are implemented so the class conforms to the \hyperlink{classCBPeripheralDelegate-p}{C\-B\-Peripheral\-Delegate} protocol. 
+
+\subsection{Method Documentation}
+\hypertarget{interfaceBTSendRec_afebf4e21bbbc80a1fdd04f1d5920d258}{\index{B\-T\-Send\-Rec@{B\-T\-Send\-Rec}!distance\-:second\-Point\-:@{distance\-:second\-Point\-:}}
+\index{distance\-:second\-Point\-:@{distance\-:second\-Point\-:}!BTSendRec@{B\-T\-Send\-Rec}}
+\subsubsection[{distance\-:second\-Point\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (double) distance\-: 
+\begin{DoxyParamCaption}
+\item[{(double$\ast$)}]{p1}
+\item[{secondPoint:(double$\ast$)}]{p2}
+\end{DoxyParamCaption}
+}}\label{interfaceBTSendRec_afebf4e21bbbc80a1fdd04f1d5920d258}
+This function uses the Haversine Formula to compute the distance between two pairs of G\-P\-S coordinates. Both input parameters are assumed to be arrays of doubles of the form \mbox{[}Latitude, Longitude\mbox{]}, both of which are in degrees. 
+\begin{DoxyParams}{Parameters}
+{\em p1} & An array of doubles of size 2 containing a pair of G\-P\-S coordinates \\
+\hline
+{\em p2} & An array of doubles of size 2 containing a pair of G\-P\-S coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns the calculated distance between the two points 
+\end{DoxyReturn}
+\hypertarget{interfaceBTSendRec_a2c40741a15aca7b2fae51be9e469ccd8}{\index{B\-T\-Send\-Rec@{B\-T\-Send\-Rec}!time\-:end\-Time\-:@{time\-:end\-Time\-:}}
+\index{time\-:end\-Time\-:@{time\-:end\-Time\-:}!BTSendRec@{B\-T\-Send\-Rec}}
+\subsubsection[{time\-:end\-Time\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (int) time\-: 
+\begin{DoxyParamCaption}
+\item[{(int$\ast$)}]{start}
+\item[{endTime:(int$\ast$)}]{end}
+\end{DoxyParamCaption}
+}}\label{interfaceBTSendRec_a2c40741a15aca7b2fae51be9e469ccd8}
+This function computes the difference between two timestamps. Both paramaters are assumed to be arrays of doubles of the form \mbox{[}Year, Month, Day, Hour, Minute, Second\mbox{]}. 
+\begin{DoxyParams}{Parameters}
+{\em start} & An array of ints of size 6 containing time information \\
+\hline
+{\em end} & An array of ints of size 6 containing time information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns the difference bewtween the two times in seconds 
+\end{DoxyReturn}
+\hypertarget{interfaceBTSendRec_ac2435c7aa9df21d6d3ffc2b570c15fb7}{\index{B\-T\-Send\-Rec@{B\-T\-Send\-Rec}!write\-File\-:to\-Database\-:@{write\-File\-:to\-Database\-:}}
+\index{write\-File\-:to\-Database\-:@{write\-File\-:to\-Database\-:}!BTSendRec@{B\-T\-Send\-Rec}}
+\subsubsection[{write\-File\-:to\-Database\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) write\-File\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{filename}
+\item[{toDatabase:({\bf Database}$\ast$)}]{db}
+\end{DoxyParamCaption}
+}}\label{interfaceBTSendRec_ac2435c7aa9df21d6d3ffc2b570c15fb7}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file whose content is to be parsed and placed into a database \\
+\hline
+{\em db} & The database where the data will be stored \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+In\-Pace/\-In\-Pace/\hyperlink{BTSendRec_8h}{B\-T\-Send\-Rec.\-h}\item 
+In\-Pace/\-In\-Pace/B\-T\-Send\-Rec.\-m\end{DoxyCompactItemize}
