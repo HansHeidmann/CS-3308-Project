@@ -11,15 +11,18 @@
 #import <MapKit/MKAnnotation.h>
 #import "Database.h"
 
+/** ViewController for viewing map and graph representation of individual route data
+ */
 @interface RouteInfoViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
-@property (nonatomic, retain) IBOutlet MKMapView *mapView;
-@property(nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic, retain) IBOutlet MKMapView *mapView;/**<Map View*/
 
-@property (nonatomic) long long int routeID;
-@property (nonatomic, strong) Database *dbManager;
-@property (nonatomic, strong) NSMutableArray *arrRouteCoord;
+@property (nonatomic) long long int routeID;/**<holds ID of current route*/
+@property (nonatomic, strong) Database *dbManager;/**<instance of Database*/
+@property (nonatomic, strong) NSMutableArray *arrRouteCoord;/**<array for holding route coordinates from DB*/
 
+/** Method for pulling individual route coordinates based on the routeID
+ */
 -(void) loadRouteData;
 
 @end

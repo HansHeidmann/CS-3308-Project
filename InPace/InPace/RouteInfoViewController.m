@@ -21,9 +21,6 @@
     [super viewDidLoad];
     
     self.mapView.delegate = self;
-  
-    //self.locationManager = [[CLLocationManager alloc] init];
-    //self.locationManager.delegate = self;
     
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.0274, -105.2519);
     MKCoordinateSpan span = MKCoordinateSpanMake(.1, .1);

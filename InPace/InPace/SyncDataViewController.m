@@ -11,11 +11,12 @@
 #import "BTDiscover.h"
 
 
-
+/** ViewController for showing bluetooth data after syncing
+ */
 @interface SyncDataViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextView *testTextView;
-@property (strong) BTDiscover* discover;
+@property (weak, nonatomic) IBOutlet UITextView *testTextView;/**<textview for showing data*/
+@property (strong) BTDiscover* discover;/**<instance of BTDiscover, to discover peripherals*/
 
 
 -(void) getData;

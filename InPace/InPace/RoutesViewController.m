@@ -11,16 +11,20 @@
 #import <UIKit/UIKit.h>
 #import "RouteInfoViewController.h"
 
+/** ViewController for viewing all routes in a tableview, option to click on route and view more info
+ */
 @interface RoutesViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tblRoutes;
+@property (weak, nonatomic) IBOutlet UITableView *tblRoutes;/**<table view*/
 
-@property (nonatomic, strong) Database *dbManager;
+@property (nonatomic, strong) Database *dbManager;/**<instance of database*/
 
-@property (nonatomic, strong) NSMutableArray *arrRoutesInfo;
+@property (nonatomic, strong) NSMutableArray *arrRoutesInfo;/**<array for holding info of all routes in DB*/
 
-@property (nonatomic)long long int routeID;
+@property (nonatomic)long long int routeID;/**<holds ID of current route*/
 
+/** Method for loading data from database and putting it into the tableview
+ */
 -(void)loadData;
 
 @end

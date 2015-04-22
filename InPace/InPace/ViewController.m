@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+/** ViewController for home page
+ */
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *favoriteStatusLabel;
 
