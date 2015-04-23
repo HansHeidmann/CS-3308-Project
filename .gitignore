@@ -1,0 +1,14 @@
+#stupid hidden files on mac
+.DS_Store
+
+#backup files from linux editors
+*~
+
+# XCode user data
+**.pbxuser
+**.mode?v?
+**.perspectivev?
+**.xcuserstate
+**.xccheckout
+**/xcuserdata/*
+**.xcbaseline
