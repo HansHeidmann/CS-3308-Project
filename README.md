@@ -1,14 +1,14 @@
-	$$$$$$\                 $$$$$$$\                                
-	\_$$  _|                $$  __$$\                               
-	$$ |  $$$$$$$\        $$ |  $$ | $$$$$$\   $$$$$$$\  $$$$$$\  
-	$$ |  $$  __$$\       $$$$$$$  | \____$$\ $$  _____|$$  __$$\ 
-	$$ |  $$ |  $$ |      $$  ____/  $$$$$$$ |$$ /      $$$$$$$$ |
-	$$ |  $$ |  $$ |      $$ |      $$  __$$ |$$ |      $$   ____|
-	$$$$$$\ $$ |  $$ |      $$ |      \$$$$$$$ |\$$$$$$$\ \$$$$$$$\ 
-	\______|\__|  \__|      \__|       \_______| \_______| \_______|
+	██╗███╗   ██╗    ██████╗  █████╗  ██████╗███████╗
+	██║████╗  ██║    ██╔══██╗██╔══██╗██╔════╝██╔════╝
+	██║██╔██╗ ██║    ██████╔╝███████║██║     █████╗  
+	██║██║╚██╗██║    ██╔═══╝ ██╔══██║██║     ██╔══╝  
+	██║██║ ╚████║    ██║     ██║  ██║╚██████╗███████╗
+	╚═╝╚═╝  ╚═══╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝
+                                                 
+	  Hans Heidmann	 Calvin Hicks
 
-
-
+	Sean Tranchette  Madison Rockwell
+ 
     
            ***   Parts List  ***
            ---------------------
@@ -19,9 +19,9 @@
     
     // Common Anode RGB LED (4 pins, See my pin description below)
     
-    //  2 brown-black-red resistors (1KΩ 5% tolerance)
+    // 2 brown-black-red resistors (1KΩ 5% tolerance)
     
-    //  3 red-black-brown resistors (200Ω 5% tolerance)
+    // 3 red-black-brown resistors (200Ω 5% tolerance)
     
     // 2 Momentary Tactile Push Buttons (2 pin)
     
@@ -116,4 +116,4 @@
                      - send each line of the text file through bluetooth as a string
                      - *GPS_Moduledata.txt will be "rebuilt" string by string on the iOS receiving end
 
-*/
+
