@@ -54,21 +54,26 @@
     
     -----------------------------
     
+    Bluetooth push button --> pin 8
+    GPS push button --> pin 9
+    
+    -----------------------------
+    
     Four-Pin Addressable G-R-B LED
     
          __   
         /  \
-        |___|
+        |___|  <-- flat side
         /| |\
        | | | |
        | | | |
        | | | |
        | | | | 
-       | | 3 4
-       | | 
-       1 2
+       1 2 | |
+           | |
+           3 4            
   
-    (1) logic input  -->  pin A0 (14)
+    (1) logic input  -->  6
     (2) 4.5-6V VIN  -->  VCC
     (3) ground  -->  GND
     (4) locic output  -->  (Nothing, but could be used to chain more G-R-B LEDs together.)
@@ -112,10 +117,9 @@
 #include <Adafruit_NeoPixel.h>
 #include <avr/power.h>
 
-
-///  G-R-B LED ///
-#define PIN            14  // (A0)
-#define NUMPIXELS      1  // just 1 G-R-B LED
+/// NEO PIXEL ///
+#define PIN            6
+#define NUMPIXELS      1
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 
@@ -166,6 +170,7 @@ void setup()  {
   
   pinMode(BLE_Button_Pin, INPUT);  // prepare pin 8 (bluetooth button) for detecting button press
   pinMode(GPS_Button_Pin, INPUT);  // prepare pin 9 (gps mode button) for detecting button press
+  //pinMode(6, OUTPUT);
   
   Serial.begin(115200); // for debugging, *** remember to change to 9600 for bluetooth ***
   Serial.print("Initializing SD card...");   // for debugging, *** remember to comment this out when using RX & TX for bluetooth! ***
@@ -197,7 +202,7 @@ void setup()  {
 ////////  MAIN LOOP ////////
 void loop()  {
   
-  
+      
       DateTime now = RTC.now();  // set DateTime to current
       bool newData = false;  // initializes newData as false, will become true once the GPS_Module module gets a satellite fix
     
@@ -248,21 +253,30 @@ void loop()  {
       // blah blah blah
     
       dataFile.flush();  // flush() ensures that the bytes were (or will be) written to the microSD like they should be
-      delay(100); // quick delay to give the processor some time to do the flush()
+      delay(500); // quick delay to give the processor some time to do the flush()
       
-      
-      GPS_Button_State = digitalRead(GPS_Button_Pin);
-      if (GPS_Button_State == HIGH) { 
-          Serial.println("gps button pressed"); 
-          systemState = 1;   // **** Change system state to GPS_Module Mode (G-R-B LED will be Green)
-      }
       
       BLE_Button_State = digitalRead(BLE_Button_Pin);
+      GPS_Button_State = digitalRead(GPS_Button_Pin);
+      Serial.println(BLE_Button_State);
+      Serial.println(GPS_Button_State);
+      
+      systemState = 0;
+      
       if (BLE_Button_State == HIGH) { 
-          Serial.println("gps button pressed"); 
+          Serial.println("BLE button pressed"); 
           systemState = 2;   // **** Change system state to GPS_Module Mode (G-R-B LED will be Green)
           sendBluetoothData();
       }
+      
+      
+      if (GPS_Button_State == HIGH) { 
+          Serial.println("gps button pressed"); 
+          systemState = 1;   // **** Change system state to GPS_Module Mode (G-R-B LED will be Green)
+      } 
+      
+      
+      
       
       
       ////////////////////////////////////
@@ -271,20 +285,21 @@ void loop()  {
       if (systemState == 0) {  
         pixels.setPixelColor(0, pixels.Color(0,200,0)); // Moderately bright red color.
         pixels.show(); // This sends the updated pixels color to the hardware.
-        delay(100); // this delay needs to happen in order to make the color change take effect 
+        delay(500); // this delay needs to happen in order to make the color change take effect 
       } else if (systemState == 1) {
         pixels.setPixelColor(0, pixels.Color(200,0,0)); // Moderately bright green color.
         pixels.show(); // This sends the updated pixels color to the hardware.
-        delay(100); // this delay needs to happen in order to make the color change take effect
+        delay(500); // this delay needs to happen in order to make the color change take effect
       } else if (systemState == 2) {
         pixels.setPixelColor(0, pixels.Color(0,0,200)); // Moderately bright blue color.
         pixels.show(); // This sends the updated pixels color to the hardware.
-        delay(100); // this delay needs to happen in order to make the color change take effect
+        delay(500); // this delay needs to happen in order to make the color change take effect
       } else if (systemState == 3) {
         pixels.setPixelColor(0, pixels.Color(0,200,200)); // Moderately bright blue color.
         pixels.show(); // This sends the updated pixels color to the hardware.
-        delay(100); // this delay needs to happen in order to make the color change take effect
+        delay(500); // this delay needs to happen in order to make the color change take effect
       }
+      
 
   
   
