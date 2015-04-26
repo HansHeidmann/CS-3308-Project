@@ -24,6 +24,7 @@
 		E613185D1AE4766600829760 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E613185C1AE4766500829760 /* ViewController.m */; };
 		E613A1041AE47BF700AACE6B /* SyncDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E613A1031AE47BF700AACE6B /* SyncDataViewController.m */; };
 		E6A05D641AE4DAB100EE47EB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E6A05D631AE4DAB100EE47EB /* Icon.png */; };
+		E6A934BA1AED68CC008ED25F /* AddDataToFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A934B91AED68CC008ED25F /* AddDataToFile.m */; };
 		E6D2B4AB1AE8161300931A2C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D2B4AA1AE8161300931A2C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		E613A1021AE47BDA00AACE6B /* SyncDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyncDataViewController.h; sourceTree = "<group>"; };
 		E613A1031AE47BF700AACE6B /* SyncDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncDataViewController.m; sourceTree = "<group>"; };
 		E6A05D631AE4DAB100EE47EB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		E6A934B91AED68CC008ED25F /* AddDataToFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddDataToFile.m; path = ../AddDataToFile.m; sourceTree = "<group>"; };
 		E6D2B4AA1AE8161300931A2C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 				E61318501AE4726200829760 /* SettingsViewController.m */,
 				E613A1021AE47BDA00AACE6B /* SyncDataViewController.h */,
 				E613A1031AE47BF700AACE6B /* SyncDataViewController.m */,
+				E6A934B91AED68CC008ED25F /* AddDataToFile.m */,
 				E61318251AE471F300829760 /* ViewController.h */,
 				E613185C1AE4766500829760 /* ViewController.m */,
 				E613182B1AE471F300829760 /* Images.xcassets */,
@@ -217,6 +220,7 @@
 				TargetAttributes = {
 					E613181A1AE471F300829760 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = BT63W359N5;
 					};
 					E61318331AE471F400829760 = {
 						CreatedOnToolsVersion = 6.3;
@@ -278,6 +282,7 @@
 				E61318521AE4726200829760 /* BTSendRec.m in Sources */,
 				E61318241AE471F300829760 /* AppDelegate.m in Sources */,
 				E61318551AE4726200829760 /* RouteInfoViewController.m in Sources */,
+				E6A934BA1AED68CC008ED25F /* AddDataToFile.m in Sources */,
 				E61318541AE4726200829760 /* Database.m in Sources */,
 				E61318211AE471F300829760 /* main.m in Sources */,
 			);
@@ -398,10 +403,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = InPace/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/InPace/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +418,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = InPace/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/InPace/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

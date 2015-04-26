@@ -216,7 +216,7 @@ void loop()  {
         
      if (systemState == 1) {
        
-            // Serial.println("System State:");
+            // Serial.pri1ntln("System State:");
             // Serial.println(systemState);
             
             digitalWrite(RGB_RED_PIN, LOW);
