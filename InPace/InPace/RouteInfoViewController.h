@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
 #import "Database.h"
+#import "CorePlot-CocoaTouch.h"
 
 /** ViewController for viewing map and graph representation of individual route data
  */

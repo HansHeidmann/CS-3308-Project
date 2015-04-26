@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
 #import "Database.h"
+#import "CorePlot-CocoaTouch.h"
 
 @interface RouteInfoViewController ()
 

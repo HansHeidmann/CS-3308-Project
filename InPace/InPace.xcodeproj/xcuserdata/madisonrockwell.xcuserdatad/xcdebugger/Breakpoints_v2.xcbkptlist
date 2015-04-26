@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InPace/RouteInfoViewController.m"
-            timestampString = "451773163.118989"
+            timestampString = "451778934.541246"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
