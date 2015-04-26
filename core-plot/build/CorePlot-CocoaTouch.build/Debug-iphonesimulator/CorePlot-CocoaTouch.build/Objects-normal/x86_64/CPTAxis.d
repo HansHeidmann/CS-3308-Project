@@ -1,0 +1,34 @@
+dependencies: \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTAxis.m \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTAxis.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTDefinitions.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTLayer.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTResponder.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/iPhoneOnly/CPTPlatformSpecificDefines.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTTextStyle.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/iPhoneOnly/CPTTextStylePlatformSpecific.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTAxisLabel.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTAxisLabelGroup.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTAxisSet.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTAxisTitle.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTColor.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTExceptions.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTFill.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTGradient.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTGridLineGroup.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTGridLines.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTImage.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTLimitBand.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTLineCap.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTLineStyle.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTMutablePlotRange.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTPlotRange.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTPlotArea.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTAnnotationHostLayer.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTGraph.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTBorderedLayer.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTPlotSpace.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTShadow.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTTextLayer.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTUtilities.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/NSCoderExtensions.h

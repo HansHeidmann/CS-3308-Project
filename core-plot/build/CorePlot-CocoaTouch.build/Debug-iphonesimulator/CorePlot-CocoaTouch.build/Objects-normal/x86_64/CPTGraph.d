@@ -1,0 +1,28 @@
+dependencies: \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTGraph.m \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTGraph.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTBorderedLayer.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTAnnotationHostLayer.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTLayer.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTDefinitions.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTResponder.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/iPhoneOnly/CPTPlatformSpecificDefines.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTAxis.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTTextStyle.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/iPhoneOnly/CPTTextStylePlatformSpecific.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTAxisSet.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTExceptions.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/iPhoneOnly/CPTGraphHostingView.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTLayerAnnotation.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTAnnotation.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTLegend.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTMutableTextStyle.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTPlot.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTNumericDataType.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTPlotArea.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTPlotAreaFrame.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTPlotGroup.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTPlotSpace.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTTextLayer.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTTheme.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/NSCoderExtensions.h
