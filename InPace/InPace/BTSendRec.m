@@ -245,7 +245,7 @@
 }
 
 
-
+/*
 -(NSArray*) writeData:(NSMutableArray*) StringArray{
     
     NSMutableArray *returnArray;
@@ -296,7 +296,7 @@
     }
     
 }
-
+*/
 
 //[fh seekToEndOfFile];
 
