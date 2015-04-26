@@ -65,4 +65,7 @@ This class is largely a wrapper around CBPeripheral and also acts as its delegat
 - (void) peripheral: (CBPeripheral*) peripheral didDiscoverServices: (NSError*) error;
 - (void) peripheral: (CBPeripheral*) peripheral didDiscoverCharacteristicsForService: (CBService*) service error: (NSError*) error;
 - (void) sendBTServiceNotificationWithIsBluetoothConnected: (BOOL) isBluetoothConnected;
+-(void) readBluetooth:(Database*) db;
+-(NSArray*) writeData:(NSMutableArray*) StringArray;
+
 @end

@@ -219,4 +219,86 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:RWT_BLE_SERVICE_CHANGED_STATUS_NOTIFICATION object:self userInfo:connectionDetails];
 }
 
+
+
+-(void) readBluetooth:(Database*) db {
+    
+    NSMutableArray *newBluetoothData;
+    BOOL newDataExists = true;
+    
+    while (newDataExists) {
+        [self.peripheral readValueForCharacteristic:self.readCharacteristic];
+        NSString *newData = [newData initWithData: self.readCharacteristic.value encoding: NSUTF8StringEncoding];
+        NSLog(@"newData: %@", newData);
+        if (newData != nil){
+            [newBluetoothData addObject: newData];
+        } else {
+            newData = false;
+        }
+    }
+    NSArray *newFiles = [self writeData:newBluetoothData];
+    for (NSString* file in newFiles) {
+        [self writeFile: file toDatabase: db];
+        [[NSFileManager defaultManager] removeItemAtPath:file error: nil];
+    }
+    
+}
+
+
+
+-(NSArray*) writeData:(NSMutableArray*) StringArray{
+    
+    NSMutableArray *returnArray;
+    int count = 0;
+    NSString *resultString = @"";
+    NSString *path =  @"gpsdata.txt";//[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:
+    NSFileHandle *fh = [NSFileHandle fileHandleForWritingAtPath:path];
+
+    //write data to a local file on your machine
+    //for (NSString *entry in StringArray) {
+    
+    for (NSString* line in StringArray) {
+   
+        //NSLog(@"string: %@", string);
+        if([line isEqualToString: @"start"]) {
+            [[NSFileManager defaultManager] createFileAtPath:path contents:nil attributes:nil];
+            fh = [NSFileHandle fileHandleForWritingAtPath:path];
+            //[fh open file]
+            [returnArray addObject:path];
+        }
+        if([line isEqualToString: @"end"]) {
+            [fh closeFile];
+        }
+        
+        if(count == 3) { //write to file
+            
+            //[resultString appendString:(string)];
+            resultString = [resultString stringByAppendingString: @", "];
+            resultString = [resultString stringByAppendingString: line];
+            resultString = [resultString stringByAppendingString: @"\n"];
+            //NSLog(@"result: %@", resultString);
+            [fh writeData:[resultString dataUsingEncoding:NSUnicodeStringEncoding]];
+            //
+            count = 0;
+        }
+        
+        else if(count < 3) {
+            
+            if(count != 0) {
+                resultString = [resultString stringByAppendingString: @", "];
+                //NSLog(@"result: %@", resultString);
+            }
+            resultString = [resultString stringByAppendingString:line];
+            NSLog(@"result: %@", resultString);
+            NSLog(@"string: %@", line);
+            count++;
+        }
+    }
+    
+}
+
+
+//[fh seekToEndOfFile];
+
+
 @end
