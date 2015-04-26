@@ -1,0 +1,25 @@
+dependencies: \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTMutableNumericDataTypeConversionTests.m \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTMutableNumericDataTypeConversionTests.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTTestCase.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCAbstractTest.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertions.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTextCase+AsynchronousTesting.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestLog.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTMutableNumericData+TypeConversion.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTMutableNumericData.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTNumericData.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTNumericDataType.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTUtilities.h \
+  /Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/Source/CPTDefinitions.h
