@@ -16,6 +16,7 @@
 @end
 
 @implementation RouteInfoViewController
+@synthesize statsView, routeView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -71,4 +72,21 @@
 }
 
 
+- (IBAction)segmentValueChanged:(UISegmentedControl *)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            self.statsView.hidden = YES;
+            self.routeView.hidden = NO;
+            break;
+            
+        case 1:
+            self.statsView.hidden = NO;
+            self.routeView.hidden = YES;
+            break;
+            
+        default:
+            break;
+    }
+    
+}
 @end

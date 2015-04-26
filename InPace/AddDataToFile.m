@@ -16,9 +16,6 @@
 #import <Foundation/Foundation.h>
 
 
-
-
-
 void writeData (NSMutableArray* StringArray){
     
     Boolean notEnd = true;
@@ -27,7 +24,7 @@ void writeData (NSMutableArray* StringArray){
     
     int loopNumber = 0;
     
-    NSMutableString *resultString = @"";
+    NSString *resultString = @"";
     
     //write data to a local file on your machine
     
@@ -114,26 +111,6 @@ void writeData (NSMutableArray* StringArray){
         }
         
     }
-    
-}
-
-
-
-int main(int argc, const char * argv[]) {
-    
-    @autoreleasepool {
-        
-        // insert code here...
-        
-        NSLog(@"Hello, World!");
-        
-        NSMutableArray *writableData = @[@"testing", @"element2", @"element3", @"element4", @"testing", @"element2", @"element3", @"element4", @"testing", @"element2", @"element3", @"element4", @"testing", @"element2", @"element3", @"element4", @"end"];
-        
-        writeData(writableData);
-        
-    }
-    
-    return 0;
     
 }
 
