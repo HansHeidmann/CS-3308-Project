@@ -64,7 +64,46 @@ double y = 0;
     //mapping
     self.mapView.delegate = self;
     
-    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.012603, -105.279182);
+    double lonMin = 0;
+    double lonMax = 0;
+    double latMin = 0;
+    double latMax = 0;
+    double lat = 0;
+    double lon = 0;
+    
+    for (int i = 0; i < [self.arrRouteCoords count]; i++) {
+        
+        lat = [[[self.arrRouteCoords objectAtIndex: i] objectAtIndex: 0] doubleValue];
+        lon = [[[self.arrRouteCoords objectAtIndex: i] objectAtIndex: 1] doubleValue];
+        
+        coords[i] = CLLocationCoordinate2DMake(lat, lon);
+        
+        if (i ==0){
+            latMin = lat;
+            latMax = lat;
+            lonMin = lon;
+            lonMax = lon;
+        }
+        
+        if (lat < latMin){
+            latMin = lat;
+        }
+        if (lat > latMax){
+            latMax = lat;
+        }
+        if (lon < lonMin){
+            lonMin = lon;
+        }
+        if (lon > lonMax){
+            lonMax = lon;
+        }
+    }
+    
+    double latCenter = (latMin + latMax)/2;
+    double lonCenter = (lonMin + lonMax)/2;
+    NSLog(@"LATCENTER: %f LONCENTER: %f", latCenter, lonCenter);
+    
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(latCenter, lonCenter);
     MKCoordinateSpan span = MKCoordinateSpanMake(.005, .005);
     MKCoordinateRegion region = MKCoordinateRegionMake(center, span);
     [self.mapView setRegion: region animated: YES];
@@ -72,10 +111,6 @@ double y = 0;
     [self.mapView setMapType:MKMapTypeHybrid];
     [self.mapView setZoomEnabled:YES];
     [self.mapView setScrollEnabled:YES];
-    
-    for (int i = 0; i < [self.arrRouteCoords count]; i++) {
-        coords[i] = CLLocationCoordinate2DMake([[[self.arrRouteCoords objectAtIndex: i] objectAtIndex: 0] doubleValue], [[[self.arrRouteCoords objectAtIndex: i] objectAtIndex: 1] doubleValue]);
-    }
     
     MKPolyline *routeMap = [MKPolyline polylineWithCoordinates:coords count:[self.arrRouteCoords count]];
     
