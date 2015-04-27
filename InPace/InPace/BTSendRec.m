@@ -234,7 +234,6 @@
         if ([newData isEqual: @""]){
             newDataExists = false;
             NSLog(@"newData = false");
-            
         } else {
             [newBluetoothData addObject: newData];
         }
