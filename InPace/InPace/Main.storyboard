@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="a6v-7a-Cu9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="a6v-7a-Cu9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Test Receiving BLE Data -->
@@ -54,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="myRoutes" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zah-Wq-J4Z">
-                                <rect key="frame" x="98" y="223" width="124" height="41"/>
+                                <rect key="frame" x="98" y="179" width="124" height="41"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="My Routes">
@@ -65,12 +65,6 @@
                                     <segue destination="myp-Pf-jhc" kind="push" identifier="RoutesViewController" id="6LU-Ai-Awg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Favorite Run: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uf4-Av-D7N">
-                                <rect key="frame" x="103" y="126" width="115" height="23"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iod-6A-Tal">
                                 <rect key="frame" x="98" y="371" width="124" height="41"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,10 +79,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Al-3k-IPk">
-                                <rect key="frame" x="18" y="446" width="285" height="41"/>
+                                <rect key="frame" x="98" y="272" width="124" height="41"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Sync Data From Wristband">
+                                <state key="normal" title="Sync Data">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="0.18713700289999999" blue="0.95508288350000003" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 </state>
@@ -97,45 +91,19 @@
                                     <segue destination="xJi-0G-YbI" kind="push" id="i2d-9G-Oi9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="***Run inserts here***" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMJ-FM-rVA" userLabel="Favorite Run:">
-                                <rect key="frame" x="-140" y="154" width="600" height="23"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAb-XD-vof">
-                                <rect key="frame" x="98" y="296" width="124" height="41"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="New Route">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="1" green="0.18713700289999999" blue="0.95508288350000003" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="y62-Ut-vhd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14014426870275312" green="0.75936765989021104" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="2Al-3k-IPk" secondAttribute="centerX" id="2Ot-6a-Dpf"/>
                             <constraint firstAttribute="centerX" secondItem="iod-6A-Tal" secondAttribute="centerX" id="QI1-mT-AXJ"/>
-                            <constraint firstAttribute="centerX" secondItem="Uf4-Av-D7N" secondAttribute="centerX" id="UvU-9H-p73"/>
-                            <constraint firstAttribute="centerX" secondItem="zAb-XD-vof" secondAttribute="centerX" id="VJq-jb-MMo"/>
                             <constraint firstAttribute="centerX" secondItem="Zah-Wq-J4Z" secondAttribute="centerX" id="Vjj-7b-2zn"/>
-                            <constraint firstAttribute="centerX" secondItem="MMJ-FM-rVA" secondAttribute="centerX" id="WJo-fE-8vO"/>
-                            <constraint firstItem="zAb-XD-vof" firstAttribute="width" secondItem="Zah-Wq-J4Z" secondAttribute="width" id="YwB-oe-7eO"/>
-                            <constraint firstItem="zAb-XD-vof" firstAttribute="width" secondItem="iod-6A-Tal" secondAttribute="width" id="cCI-xK-6k7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4m5-cH-tbn"/>
-                    <connections>
-                        <outlet property="favoriteStatusLabel" destination="MMJ-FM-rVA" id="73x-dO-lIE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474.13333333333333" y="-381.50666666666666"/>
+            <point key="canvasLocation" x="474" y="-382"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="8ft-Ul-tub">
