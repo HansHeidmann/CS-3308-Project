@@ -461,7 +461,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/**",
+					"$(SRCROOT)/InPace/core-plot/framework/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/InPace/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -481,7 +481,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/madisonrockwell/Documents/CS-3308-Project/InPace/InPace/core-plot/framework/**",
+					"$(SRCROOT)/InPace/core-plot/framework/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/InPace/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

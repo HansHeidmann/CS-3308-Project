@@ -222,18 +222,21 @@
 
 
 -(void) readBluetooth:(Database*) db {
-    
+    NSLog(@"got inside readBluetooth");
     NSMutableArray *newBluetoothData;
     BOOL newDataExists = true;
     
     while (newDataExists) {
         [self.peripheral readValueForCharacteristic:self.readCharacteristic];
-        NSString *newData = [newData initWithData: self.readCharacteristic.value encoding: NSUTF8StringEncoding];
+        NSString *newData = [[NSString alloc] initWithData: self.readCharacteristic.value encoding:NSUTF8StringEncoding];
+        //NSString *newData = self.readCharacteristic.value.description;
         NSLog(@"newData: %@", newData);
-        if (newData != nil){
-            [newBluetoothData addObject: newData];
+        if ([newData isEqual: @""]){
+            newDataExists = false;
+            NSLog(@"newData = false");
+            
         } else {
-            newData = false;
+            [newBluetoothData addObject: newData];
         }
     }
     NSArray *newFiles = [self writeData:newBluetoothData];
@@ -245,14 +248,14 @@
 }
 
 
-/*
 -(NSArray*) writeData:(NSMutableArray*) StringArray{
     
     NSMutableArray *returnArray;
     int count = 0;
     NSString *resultString = @"";
-    NSString *path =  @"gpsdata.txt";//[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:
-    NSFileHandle *fh = [NSFileHandle fileHandleForWritingAtPath:path];
+    NSString *path;
+    NSFileHandle *fh;
+    NSInteger *fileNumber = 0;
 
     //write data to a local file on your machine
     //for (NSString *entry in StringArray) {
@@ -261,6 +264,8 @@
    
         //NSLog(@"string: %@", string);
         if([line isEqualToString: @"start"]) {
+            path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: [NSString stringWithFormat: @"data%ln.txt", fileNumber]];
+            fileNumber++;
             [[NSFileManager defaultManager] createFileAtPath:path contents:nil attributes:nil];
             fh = [NSFileHandle fileHandleForWritingAtPath:path];
             //[fh open file]
@@ -295,8 +300,8 @@
         }
     }
     
+    return returnArray;
 }
-*/
 
 //[fh seekToEndOfFile];
 

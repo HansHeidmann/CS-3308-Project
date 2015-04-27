@@ -330,7 +330,7 @@ void sendBluetoothData() {
     
        while (dataFile.available()) {
           Serial.write(dataFile.read()); // read from the file until there's nothing else in it
-          Serial.flush();
+          //Serial.flush();
        }
        
        //SD.remove("gpsdata.txt");   // REMOVE gpsdata.txt after sending it over Bluetooth

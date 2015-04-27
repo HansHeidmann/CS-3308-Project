@@ -33,9 +33,7 @@
     
     self.title = @"SyncData";
     
-    
-    [self getData];
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,16 +49,42 @@
     if (self.discover.manager.state != CBCentralManagerStatePoweredOn) {
         NSLog(@"must be powered on");
     }
-   
-    
+
+}
+
+-(void) viewDidDisappear:(BOOL)animated {
     
     
 }
+ 
+
 
 - (void) viewDidAppear:(BOOL)animated {
     
     self.testTextView.text = @"Hello";
+    
+    [self getData];
+    NSLog(@" getData was called");
+    
+    /*
+    Database* db = [[Database alloc] init_dbfile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Database.db"]];
+    
+    [self.discover.wristband readBluetooth:db];
+    */
+    
+    [self performSelector:@selector(readBluetoothData) withObject:(self) afterDelay:(3)];
+     
  
+}
+
+
+
+- (void) readBluetoothData {
+
+    Database* db = [[Database alloc] init_dbfile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Database.db"]];
+    [self.discover.wristband readBluetooth:db];
+    NSLog(@"readBluetooth Data was called");
+    
 }
 
 
