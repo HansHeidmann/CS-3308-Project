@@ -31,10 +31,12 @@ double y = 0;
     
     [self loadRouteData];
     
+    self.title = [NSString stringWithFormat: @"%d Meters in %d Minutes", (int)ceil([[[self.arrRouteData objectAtIndex: 0] objectAtIndex: 0] doubleValue]),(int)ceil([[[self.arrRouteData objectAtIndex: 0] objectAtIndex: 1] floatValue]/60.0)];
     
     //graphing
     self.hostView = [[CPTGraphHostingView alloc] initWithFrame:self.statsView.bounds];
     [self.statsView addSubview:self.hostView];
+    self.hostView.allowPinchScaling = YES;
     
     // Create a CPTGraph object and add to hostView
     CPTGraph* graph = [[CPTXYGraph alloc] initWithFrame:self.hostView.bounds];
@@ -42,6 +44,8 @@ double y = 0;
     
     // Get the (default) plotspace from the graph so we can set its x/y ranges
     CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *) graph.defaultPlotSpace;
+    // Enable user interactions for plot space
+    plotSpace.allowsUserInteraction = YES;
     
     float xAxisMax = ([[[self.arrRouteData objectAtIndex: 0] objectAtIndex: 1] floatValue])/60;
     float yAxisMax = [[[self.arrRouteData objectAtIndex: 0] objectAtIndex: 0] floatValue];
@@ -58,6 +62,70 @@ double y = 0;
     
     // Finally, add the created plot to the default plot space of the CPTGraph object we created before
     [graph addPlot:plot toPlotSpace:graph.defaultPlotSpace];
+    
+    
+    CPTMutableLineStyle *plotLineStyle = [plot.dataLineStyle mutableCopy];
+    plotLineStyle.lineWidth = 2.5;
+    plotLineStyle.lineColor = [CPTColor redColor];
+    plot.dataLineStyle = plotLineStyle;
+    
+    // Create and set text style
+    CPTMutableTextStyle *titleStyle = [CPTMutableTextStyle textStyle];
+    titleStyle.color = [CPTColor whiteColor];
+    titleStyle.fontName = @"Helvetica-Bold";
+    titleStyle.fontSize = 16.0f;
+    graph.titleTextStyle = titleStyle;
+    graph.titlePlotAreaFrameAnchor = CPTRectAnchorTop;
+    graph.titleDisplacement = CGPointMake(0.0f, 10.0f);
+    //Set padding for plot area
+    [graph.plotAreaFrame setPaddingLeft:16.0f];
+    [graph.plotAreaFrame setPaddingBottom:44.0f];
+    
+    
+    
+    
+    // 2 - Get axis set
+    CPTXYAxisSet *axisSet = (CPTXYAxisSet *) self.hostView.hostedGraph.axisSet;
+    CPTAxis *x = axisSet.xAxis;
+    x.title = @"Time (min)";
+    // Configure y-axis
+    CPTAxis *y = axisSet.yAxis;
+    y.title = @"Distance (m)";
+    y.titleOffset = -20.0f;
+//    y.axisLineStyle = axisLineStyle;
+//    y.majorGridLineStyle = gridLineStyle;
+    y.labelingPolicy = CPTAxisLabelingPolicyNone;
+    y.labelTextStyle = titleStyle;
+    y.labelOffset = 16.0f;
+//    y.majorTickLineStyle = axisLineStyle;
+    y.majorTickLength = 4.0f;
+    y.minorTickLength = 2.0f;
+    y.tickDirection = CPTSignPositive;
+    NSInteger majorIncrement = 100;
+    NSInteger minorIncrement = 50;
+    CGFloat yMax = 700.0f;  // should determine dynamically based on max price
+    NSMutableSet *yLabels = [NSMutableSet set];
+    NSMutableSet *yMajorLocations = [NSMutableSet set];
+    NSMutableSet *yMinorLocations = [NSMutableSet set];
+    for (NSInteger j = minorIncrement; j <= yMax; j += minorIncrement) {
+        NSUInteger mod = j % majorIncrement;
+        if (mod == 0) {
+            CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:[NSString stringWithFormat:@"%i", j] textStyle:y.labelTextStyle];
+            NSDecimal location = CPTDecimalFromInteger(j);
+            label.tickLocation = location;
+            label.offset = -y.majorTickLength - y.labelOffset;
+            if (label) {
+                [yLabels addObject:label];
+            }
+            [yMajorLocations addObject:[NSDecimalNumber decimalNumberWithDecimal:location]];
+        } else {
+            [yMinorLocations addObject:[NSDecimalNumber decimalNumberWithDecimal:CPTDecimalFromInteger(j)]];
+        }
+    }
+    y.axisLabels = yLabels;    
+    y.majorTickLocations = yMajorLocations;
+    y.minorTickLocations = yMinorLocations;
+
     
     
     
@@ -210,5 +278,9 @@ double y = 0;
             break;
     }
     
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    y = 0;
 }
 @end
