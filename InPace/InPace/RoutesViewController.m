@@ -89,7 +89,7 @@
     
     
     // Set the loaded data to the appropriate cell labels.
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ Distance: %@ Miles" , [[self.arrRoutesInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfName], [[self.arrRoutesInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfDistance]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ Distance: %@ Meters" , [[self.arrRoutesInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfName], [[self.arrRoutesInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfDistance]];
     
     NSLog(@"GOT HERE inside tableView:cellForRowAtIndexPath");
     
