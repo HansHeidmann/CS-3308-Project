@@ -12,7 +12,17 @@
 
 	Description:
 
-	An Arduino wristband that provides information on how the user is pacing themselves during a run, walk or cycling route. It tracks GPS locations and current times to compare the users current performance with previous attempts at the route. Other features could include more familiar statistics such as total time, heart rate, and calories burned as well as an accompanying app to display this information in a beautiful and clear manner. This is a large project that could be beyond the scope of time set for this class. We will set smaller goals that can be met by class end and expand on that if we are ahead of schedule. 
+	An Arduino wristband that provides information on how the user is pacing
+ themselves during a run, walk or cycling route. It tracks GPS locations
+ and current times to compare the users current performance with previous
+ attempts
+ at the route. Other features could include more familiar statistics such as
+ total time, heart rate, and calories burned as well as an accompanying
+ app to
+ display this information in a beautiful and clear manner. This is a large 
+project that could be beyond the scope of time set for this class. We will set
+ smaller goals that can be met by class end and expand on that if we are ahead
+ of schedule. 
 
 
 	REPO ORGANIZATION:
