@@ -9,9 +9,34 @@
 
 	Sean Tranchette  Madison Rockwell
  
-    
-           ***   Parts List  ***
-           ---------------------
+
+	Description:
+
+	An Arduino wristband that provides information on how the user is pacing themselves during a run, walk or cycling route. It tracks GPS locations and current times to compare the users current performance with previous attempts at the route. Other features could include more familiar statistics such as total time, heart rate, and calories burned as well as an accompanying app to display this information in a beautiful and clear manner. This is a large project that could be beyond the scope of time set for this class. We will set smaller goals that can be met by class end and expand on that if we are ahead of schedule. 
+
+
+	How to Build and Run InPace:
+
+	Step 1 - Clone our Respository
+
+	// git clone https://github.com/H-4-N-5/CS-3308-Project.git
+
+	Step 2 - Open Xcode 
+
+	// Click File -> Open: CS-3308-Project/InPace/InPace.xcodeproj
+
+	Step 3 - Build and Run
+
+	// In Xcode, press COMMAND+R or click Project -> Build and Run
+
+
+       ___________________________
+	///   						  ///
+    ///   BUILDING THE WRISTBAND  ///
+    ///___________________________///
+
+    ***  Electronics Parts List  ***
+    ---------------------------------
                 
     // Arduino Pro Mini (5V/16mHz Version)
     
