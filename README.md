@@ -15,19 +15,19 @@
 	An Arduino wristband that provides information on how the user is pacing themselves during a run, walk or cycling route. It tracks GPS locations and current times to compare the users current performance with previous attempts at the route. Other features could include more familiar statistics such as total time, heart rate, and calories burned as well as an accompanying app to display this information in a beautiful and clear manner. This is a large project that could be beyond the scope of time set for this class. We will set smaller goals that can be met by class end and expand on that if we are ahead of schedule. 
 
 
-REPO ORGANIZATION:
-./3d Models -> Models for a failed 3D print of a case for our wristband
-./Arduino Code -> All code for the Arduino in our wristband
-./AssingmentPDFs -> All PDFs of the various assignment parts for the class
-./Circuit_Schematics -> Generated images of our wristband circuit layout
-./core-plot -> A graphing library we need for our app
-./doc -> The doxygen-generated documentation for our code
-./Fritzing -> Fritzing files for circuit design
-./Icons and Launch Image -> Icon for our app on the home screen
-./InPace -> Our source code
-./Photo_Documentation -> Various pictures of our project
-./Photoshop App Icon Files -> Photoshop file for our Icons
-./test -> Test framework and test files
+	REPO ORGANIZATION:
+	./3d Models -> Models for a failed 3D print of a case for our wristband
+	./Arduino Code -> All code for the Arduino in our wristband
+	./AssingmentPDFs -> All PDFs of the various assignment parts for the class
+	./Circuit_Schematics -> Generated images of our wristband circuit layout
+	./core-plot -> A graphing library we need for our app
+	./doc -> The doxygen-generated documentation for our code
+	./Fritzing -> Fritzing files for circuit design
+	./Icons and Launch Image -> Icon for our app on the home screen
+	./InPace -> Our source code
+	./Photo_Documentation -> Various pictures of our project
+	./Photoshop App Icon Files -> Photoshop file for our Icons
+	./test -> Test framework and test files
 
 	How to Build and Run InPace:
 
